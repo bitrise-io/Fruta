@@ -1,0 +1,30 @@
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+English translation for some common NutritionFact strings
+*/
+
+"Nutrition Facts" = "Nutrition Facts";
+"Data Unavailable" = "Data Unavailable";
+"Serving Size 1 Cup" = "Serving Size 1 Cup";
+
+// MARK: -  Nutritions
+
+"Total Fat" = "Total Fat";
+"Saturated Fat" = "Saturated Fat";
+"Monounsaturated Fat" = "Monounsaturated Fat";
+"Polyunsaturated Fat" = "Polyunsaturated Fat";
+"Cholesterol" = "Cholesterol";
+"Sodium" = "Sodium";
+"Total Carbohydrates" = "Total Carbohydrates";
+"Carbohydrates" = "Carbohydrates";
+"Dietary Fiber" = "Dietary Fiber";
+"Sugar" = "Sugar";
+"Protein" = "Protein";
+"Calcium" = "Calcium";
+"Potassium" = "Potassium";
+"Vitamin A" = "Vitamin A";
+"Vitamin C" = "Vitamin C";
+"Iron" = "Iron";
+"%lld Calories" = "%lld Calories";

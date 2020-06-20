@@ -1,0 +1,30 @@
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+Brazilian Portuguese translation for some common NutritionFact strings
+*/
+
+"Nutrition Facts" = "Fatos Nutricionais";
+"Data Unavailable" = "Dados não disponíveis";
+"Serving Size 1 Cup" = "Porção 1 Caneca";
+
+// MARK: -  Nutritions
+
+"Total Fat" = "Total de Gordura";
+"Saturated Fat" = "Gordura Saturada";
+"Monounsaturated Fat" = "Gordura Monosaturada";
+"Polyunsaturated Fat" = "Gordura Polisaturada";
+"Cholesterol" = "Colesterol";
+"Sodium" = "Sódio";
+"Total Carbohydrates" = "Total de Carboidratos";
+"Carbohydrates" = "Carboidrato";
+"Dietary Fiber" = "Fibra Dietética";
+"Sugar" = "Açúcar";
+"Protein" = "Proteina";
+"Calcium" = "Cálcio";
+"Potassium" = "Potassio";
+"Vitamin A" = "Vitamina A";
+"Vitamin C" = "Vitamina C";
+"Iron" = "Ferro";
+"%lld Calories" = "%lld Calorias";

@@ -1,0 +1,31 @@
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+German translation for some common NutritionFact strings
+*/
+
+
+"Nutrition Facts" = "Inhaltsstoffe";
+"Data Unavailable" = "Daten nicht verfügbar";
+"Serving Size 1 Cup" = "Serviereinheit: 1 Tasse";
+
+// MARK: -  Nutritions
+
+"Total Fat" = "Fett (gesamt)";
+"Saturated Fat" = "Fett (gesättigt)";
+"Monounsaturated Fat" = "Fett (einfachungesättigt)";
+"Polyunsaturated Fat" = "Fett (mehrfachungesättigt)";
+"Cholesterol" = "Cholesterin";
+"Sodium" = "Natrium";
+"Total Carbohydrates" = "Kolenhydrate (gesamt)";
+"Carbohydrates" = "Kolenhydrate";
+"Dietary Fiber" = "Ballaststoffe";
+"Sugar" = "Zucker";
+"Protein" = "Eiweiß";
+"Calcium" = "Calcium";
+"Potassium" = "Kalium";
+"Vitamin A" = "Vitamin A";
+"Vitamin C" = "Vitamin C";
+"Iron" = "Eisen";
+"%lld Calories" = "%lld Kalorien";
