@@ -15,7 +15,7 @@ The Fruta sample app leverages [Sign in with Apple](https://developer.apple.com/
 
 ## Configure the Sample Code Project
 
-To build this project, use Xcode 12.0 with the iOS 14.0 SDK. The runtime requirement is iOS 14.0 or later, or macOS 10.16 or later.
+To build this project, use Xcode 12.0 with the iOS 14.0 SDK. The runtime requirement is iOS 14.0 or later, or macOS 11.0 or later.
 
 1. To run on macOS, set your team in both the macOS and macOS widget targets’ Signing & Capabilities panes. Xcode manages the provisioning profiles for you.
 2. To run on an iOS or iPadOS device, create provisioning profiles for the iOS app, the iOS App Clip, and the iOS widget manually. Be sure to enable App Groups and Sign in with Apple for both the app and the App Clip. Also, open the `iOSClip.entitlements` file and update the value of the [Parent Application Identifiers Entitlement](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_parent-application-identifiers) to match the iOS app's bundle identifier.
