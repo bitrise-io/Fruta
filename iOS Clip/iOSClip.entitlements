@@ -12,11 +12,11 @@
 	</array>
 	<key>com.apple.developer.parent-application-identifiers</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.example.apple-samplecode.fruta</string>
+		<string>$(AppIdentifierPrefix)io.bitrise.fruta</string>
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.example.fruta</string>
+		<string>group.io.bitrise.fruta</string>
 	</array>
 </dict>
 </plist>
