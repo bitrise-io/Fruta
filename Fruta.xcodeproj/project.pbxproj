@@ -1428,6 +1428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = DT2C2FZ7U2;
 				INFOPLIST_FILE = "iOS Widgets/Info.plist";
@@ -1439,7 +1440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.ios-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Wildcard (io.bitrise.*) iOS Development";
+				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Widgets";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1453,6 +1454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = DT2C2FZ7U2;
 				INFOPLIST_FILE = "iOS Widgets/Info.plist";
@@ -1464,7 +1466,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.ios-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Wildcard (io.bitrise.*) iOS Development";
+				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Widgets";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1493,7 +1495,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.macos-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Wildcard (io.bitrise.*) macOS Development";
+				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Widgets";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1520,7 +1522,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.macos-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Wildcard (io.bitrise.*) macOS Development";
+				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Widgets";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
