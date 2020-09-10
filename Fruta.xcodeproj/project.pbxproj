@@ -1273,7 +1273,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest;
 				PRODUCT_NAME = Fruta;
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Development";
 				SDKROOT = iphoneos;
@@ -1299,7 +1299,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest;
 				PRODUCT_NAME = Fruta;
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Development";
 				SDKROOT = iphoneos;
@@ -1329,7 +1329,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest;
 				PRODUCT_NAME = Fruta;
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Development";
 				SDKROOT = macosx;
@@ -1357,7 +1357,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest;
 				PRODUCT_NAME = Fruta;
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Development";
 				SDKROOT = macosx;
@@ -1383,7 +1383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta.Clip;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Clip Development";
 				SDKROOT = iphoneos;
@@ -1411,7 +1411,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta.Clip;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Clip Development";
 				SDKROOT = iphoneos;
@@ -1438,7 +1438,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.ios-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.appcliptest.ios-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Widgets";
 				SDKROOT = iphoneos;
@@ -1464,7 +1464,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.ios-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.appcliptest.ios-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Widgets";
 				SDKROOT = iphoneos;
@@ -1493,7 +1493,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.macos-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.appcliptest.macos-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Widgets";
 				SDKROOT = macosx;
@@ -1520,7 +1520,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.macos-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.appcliptest.macos-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Widgets";
 				SDKROOT = macosx;
