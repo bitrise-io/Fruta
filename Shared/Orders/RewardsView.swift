@@ -6,6 +6,7 @@ Displays progress towards the next free smoothie, as well as offers a way for us
 */
 
 import SwiftUI
+import AuthenticationServices
 
 struct RewardsView: View {
     @EnvironmentObject private var model: FrutaModel
