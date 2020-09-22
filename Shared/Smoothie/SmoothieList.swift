@@ -13,7 +13,7 @@ struct SmoothieList: View {
     @State private var selection: Smoothie?
     @EnvironmentObject private var model: FrutaModel
     
-    var content: some View {
+    var body: some View {
         List(selection: $selection) {
             ForEach(smoothies) { smoothie in
                 NavigationLink(
@@ -30,16 +30,6 @@ struct SmoothieList: View {
                 }
             }
         }
-    }
-    
-    @ViewBuilder var body: some View {
-        #if os(iOS)
-        content
-        #else
-        content
-            .frame(minWidth: 270, idealWidth: 300, maxWidth: 400, maxHeight: .infinity)
-            .toolbar { Spacer() }
-        #endif
     }
 }
 

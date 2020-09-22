@@ -75,7 +75,7 @@ struct RecipeUnlockButton: View {
         #endif
     }
     
-    @ViewBuilder var body: some View {
+    var body: some View {
         #if os(iOS)
         ZStack(alignment: .bottom) {
             Image("smoothie/recipes-background").resizable()
@@ -106,7 +106,6 @@ struct RecipeUnlockButton: View {
     }
 }
 
-// MARK: - Product
 extension RecipeUnlockButton {
     struct Product {
         var title: String

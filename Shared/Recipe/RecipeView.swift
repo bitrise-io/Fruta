@@ -75,6 +75,9 @@ struct RecipeView: View {
         }
         .background(backgroundColor.edgesIgnoringSafeArea(.all))
         .navigationTitle(smoothie.title)
+        .toolbar {
+            SmoothieFavoriteButton(smoothie: smoothie)
+        }
     }
 }
 
@@ -121,5 +124,7 @@ struct RecipeIngredientRow: View {
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
         RecipeView(smoothie: .thatsBerryBananas)
+            .environmentObject(FrutaModel())
+            .environmentObject(Store())
     }
 }

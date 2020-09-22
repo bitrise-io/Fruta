@@ -58,7 +58,7 @@ extension Smoothie {
         .berryBlue,
         .carrotChops,
         .hulkingLemonade,
-        .pinaColada,
+        .crazyColada,
         .kiwiCutie,
         .lemonberry,
         .loveYouBerryMuch,
@@ -98,10 +98,10 @@ extension Smoothie {
         hasFreeRecipe: true
     )
 
-    static let pinaColada = Smoothie(
-        id: "if-you-like-pina-colada",
-        title: "If You Like Piña Colada",
-        description: "…and getting caught in the rain. This is the smoothie for you!",
+    static let crazyColada = Smoothie(
+        id: "crazy-colada",
+        title: "Crazy Colada",
+        description: "Enjoy the tropical flavors of coconut and pineapple!",
         measuredIngredients: [
             MeasuredIngredient(.pineapple, measurement: Measurement(value: 1.5, unit: .cups)),
             MeasuredIngredient(.almondMilk, measurement: Measurement(value: 1, unit: .cups)),

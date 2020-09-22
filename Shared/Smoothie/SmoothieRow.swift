@@ -12,36 +12,12 @@ struct SmoothieRow: View {
     var smoothie: Smoothie
     
     @EnvironmentObject private var model: FrutaModel
-
-    var size: CGFloat {
-        #if os(iOS)
-        return 96
-        #else
-        return 60
-        #endif
-    }
-
-    var cornerRadius: CGFloat {
-        #if os(iOS)
-        return 16
-        #else
-        return 8
-        #endif
-    }
     
-    var verticalRowPadding: CGFloat {
-        #if os(macOS)
-        return 10
-        #else
-        return 0
-        #endif
-    }
-    
-    var verticalTextPadding: CGFloat {
+    var metrics: Metrics {
         #if os(iOS)
-        return 8
+        return Metrics(thumbnailSize: 96, cornerRadius: 16, rowPadding: 0, textPadding: 8)
         #else
-        return 0
+        return Metrics(thumbnailSize: 60, cornerRadius: 8, rowPadding: 10, textPadding: 0)
         #endif
     }
     
@@ -54,8 +30,8 @@ struct SmoothieRow: View {
             smoothie.image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: size, height: size)
-                .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+                .frame(width: metrics.thumbnailSize, height: metrics.thumbnailSize)
+                .clipShape(RoundedRectangle(cornerRadius: metrics.cornerRadius, style: .continuous))
                 .accessibility(hidden: true)
 
             VStack(alignment: .leading) {
@@ -71,13 +47,20 @@ struct SmoothieRow: View {
                     .foregroundColor(.secondary)
                     .lineLimit(1)
             }
-            .padding(.vertical, verticalTextPadding)
+            .padding(.vertical, metrics.textPadding)
             
             Spacer(minLength: 0)
         }
         .font(.subheadline)
-        .padding(.vertical, verticalRowPadding)
+        .padding(.vertical, metrics.rowPadding)
         .accessibilityElement(children: .combine)
+    }
+    
+    struct Metrics {
+        var thumbnailSize: CGFloat
+        var cornerRadius: CGFloat
+        var rowPadding: CGFloat
+        var textPadding: CGFloat
     }
 }
 

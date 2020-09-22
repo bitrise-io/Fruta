@@ -6,12 +6,14 @@ A view presented to the user once they order a smoothie, and when it's ready to 
 */
 
 import SwiftUI
+import AuthenticationServices
+import StoreKit
 
 struct OrderPlacedView: View {
     @EnvironmentObject private var model: FrutaModel
     
     #if APPCLIP
-    @Binding var presentingAppStoreOverlay: Bool
+    @State private var presentingAppStoreOverlay = false
     #endif
     
     var orderReady: Bool {
@@ -19,7 +21,7 @@ struct OrderPlacedView: View {
         return order.isReady
     }
     
-    var shouldAnnotate: Bool {
+    var presentingBottomBanner: Bool {
         #if APPCLIP
         if presentingAppStoreOverlay { return true }
         #endif
@@ -44,54 +46,21 @@ struct OrderPlacedView: View {
         VStack(spacing: 0) {
             Spacer()
             
-            FlipView(visibleSide: orderReady ? .back : .front) {
-                Card(
-                    title: "Thank you for your order!".uppercased(),
-                    subtitle: "We will notify you when your order is ready."
-                )
-            } back: {
-                Card(
-                    title: "Your smoothie is ready!".uppercased(),
-                    subtitle: "\(model.order?.smoothie.title ?? "Your smoothie") is ready to be picked up."
-                )
-            }
-            .animation(.flipCard, value: orderReady)
-            .padding()
+            orderStatusCard
             
             Spacer()
             
-            if shouldAnnotate {
-                VStack {
-                    if !model.hasAccount {
-                        Text("Sign up to get rewards!")
-                            .font(Font.headline.bold())
-                        
-                        #if os(iOS)
-                        signUpButton
-                            .frame(height: 45)
-                        #else
-                        signUpButton
-                        #endif
-                    } else {
-                        #if APPCLIP
-                        if presentingAppStoreOverlay {
-                            Text("Get the full smoothie experience!")
-                                .font(Font.title2.bold())
-                                .padding(.top, 15)
-                                .padding(.bottom, 150)
-                        }
-                        #endif
-                    }
-                }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(
-                    blurView
-                        .opacity(orderReady ? 1 : 0)
-                        .padding(.bottom, -100)
-                        .edgesIgnoringSafeArea(.all)
-                )
+            if presentingBottomBanner {
+                bottomBanner
             }
+            
+            #if APPCLIP
+            Text("App Store Overlay")
+                .hidden()
+                .appStoreOverlay(isPresented: $presentingAppStoreOverlay) {
+                    SKOverlay.AppClipConfiguration(position: .bottom)
+                }
+            #endif
         }
         .onChange(of: model.hasAccount) { _ in
             #if APPCLIP
@@ -102,7 +71,7 @@ struct OrderPlacedView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
-            ZStack(alignment: .center) {
+            ZStack {
                 if let order = model.order {
                     order.smoothie.image
                         .resizable()
@@ -130,6 +99,55 @@ struct OrderPlacedView: View {
         }
     }
     
+    var orderStatusCard: some View {
+        FlipView(visibleSide: orderReady ? .back : .front) {
+            Card(
+                title: "Thank you for your order!",
+                subtitle: "We will notify you when your order is ready."
+            )
+        } back: {
+            Card(
+                title: "Your smoothie is ready!",
+                subtitle: "\(model.order?.smoothie.title ?? "Your smoothie") is ready to be picked up."
+            )
+        }
+        .animation(.flipCard, value: orderReady)
+        .padding()
+    }
+    
+    var bottomBanner: some View {
+        VStack {
+            if !model.hasAccount {
+                Text("Sign up to get rewards!")
+                    .font(Font.headline.bold())
+                
+                #if os(iOS)
+                signUpButton
+                    .frame(height: 45)
+                #else
+                signUpButton
+                #endif
+            } else {
+                #if APPCLIP
+                if presentingAppStoreOverlay {
+                    Text("Get the full smoothie experience!")
+                        .font(Font.title2.bold())
+                        .padding(.top, 15)
+                        .padding(.bottom, 150)
+                }
+                #endif
+            }
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(
+            blurView
+                .opacity(orderReady ? 1 : 0)
+                .padding(.bottom, -100)
+                .edgesIgnoringSafeArea(.all)
+        )
+    }
+    
     struct Card: View {
         var title: String
         var subtitle: String
@@ -141,6 +159,7 @@ struct OrderPlacedView: View {
                     VStack(spacing: 16) {
                         Text(title)
                             .font(Font.title.bold())
+                            .textCase(.uppercase)
                             .layoutPriority(1)
                         Text(subtitle)
                             .font(.system(.headline, design: .rounded))

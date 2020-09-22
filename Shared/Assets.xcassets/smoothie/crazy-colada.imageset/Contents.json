@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "if-you-like-pina-colada.jpg",
+      "filename" : "crazy-colada.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "if-you-like-pina-colada@2x.jpg",
+      "filename" : "crazy-colada@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "if-you-like-pina-colada@3x.jpg",
+      "filename" : "crazy-colada@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

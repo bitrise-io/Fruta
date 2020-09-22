@@ -50,7 +50,7 @@ struct RecipeList: View {
         .clipped()
     }
     
-    var list: some View {
+    var body: some View {
         List {
             #if os(iOS)
             unlockButton.listRowInsets(EdgeInsets())
@@ -61,16 +61,6 @@ struct RecipeList: View {
                 }
             }
         }
-    }
-    
-    var content: some View {
-        Group {
-            #if os(iOS)
-            list
-            #else
-            list.frame(minWidth: 300, idealWidth: 300, maxWidth: 400)
-            #endif
-        }
         .overlay(Group {
             #if os(macOS)
             unlockButton
@@ -78,15 +68,6 @@ struct RecipeList: View {
         }, alignment: .bottom)
         .navigationTitle("Recipes")
         .animation(.spring(response: 1, dampingFraction: 1), value: store.unlockedAllRecipes)
-    }
-    
-    @ViewBuilder var body: some View {
-        #if os(macOS)
-        content
-            .toolbar { Spacer() }
-        #else
-        content
-        #endif
     }
 }
 

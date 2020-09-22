@@ -10,7 +10,6 @@ import SwiftUI
 
 @main
 struct FrutaWidgets: WidgetBundle {
-    @WidgetBundleBuilder
     var body: some Widget {
         FeaturedSmoothieWidget()
         RewardsCardWidget()

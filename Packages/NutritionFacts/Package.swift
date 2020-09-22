@@ -13,7 +13,7 @@ let package = Package(
     name: "NutritionFacts",
     defaultLocalization: "en",
     platforms: [
-        .macOS(.v10_16),
+        .macOS(.v11),
         .iOS(.v14)
     ],
     products: [

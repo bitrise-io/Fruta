@@ -45,33 +45,15 @@ struct AppSidebarNavigation: View {
     
     var body: some View {
         NavigationView {
-            #if os(macOS)
-            sidebar.frame(minWidth: 100, idealWidth: 150, maxWidth: 200, maxHeight: .infinity)
-            #else
             sidebar
-            #endif
             
             Text("Content List")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
             
-            #if os(macOS)
             Text("Select a Smoothie")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .toolbar { Spacer() }
-            #else
-            Text("Select a Smoothie")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            #endif
-        }
-    }
-    
-    struct Placeholder: View {
-        var title: String
-        
-        var body: some View {
-            Text(title)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .navigationTitle(title)
+                .toolbar {
+                    SmoothieFavoriteButton(smoothie: nil)
+                        .disabled(true)
+                }
         }
     }
     
@@ -84,12 +66,9 @@ struct AppSidebarNavigation: View {
             VStack(alignment: .leading, spacing: 0) {
                 Divider()
                 Button(action: { presentingRewards = true }) {
-                    HStack {
-                        Image(systemName: "seal")
-                        Text("Rewards")
-                    }
-                    .padding(6)
-                    .contentShape(Rectangle())
+                    Label("Rewards", systemImage: "seal")
+                        .padding(6)
+                        .contentShape(Rectangle())
                 }
                 .accessibility(label: Text("Rewards"))
                 .padding(.vertical, 8)
@@ -121,7 +100,7 @@ struct AppSidebarNavigation: View {
                     .padding()
                     .background(VisualEffectBlur())
                 }
-                .frame(minWidth: 400, maxWidth: 600, minHeight: 350, maxHeight: 500)
+                .frame(minWidth: 400, maxWidth: 600, minHeight: 400, maxHeight: 600)
                 .environmentObject(model)
                 #endif
             }
