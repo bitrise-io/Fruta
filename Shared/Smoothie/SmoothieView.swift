@@ -51,10 +51,10 @@ struct SmoothieView: View {
     var body: some View {
         Group {
             #if APPCLIP
-            container
-                .appStoreOverlay(isPresented: $presentingAppStoreOverlay) {
-                    SKOverlay.AppClipConfiguration(position: .bottom)
-                }
+//            container
+//                .appStoreOverlay(isPresented: $presentingAppStoreOverlay) {
+//                    SKOverlay.AppClipConfiguration(position: .bottom)
+//                }
             #elseif os(iOS)
             container
             #else
