@@ -14,6 +14,7 @@
 		61FB2FE3249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */; };
 		61FB2FE4249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */; };
 		61FB2FE62499555800E39B64 /* AppClip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61FB2FE52499555800E39B64 /* AppClip.framework */; };
+		D64B40D0251CC1A400DFAD75 /* Fruta macOS Widgets.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E0D713CF2496844400173A38 /* Fruta macOS Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E030D936249692C200D2E087 /* CircleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D935249692C200D2E087 /* CircleToggleStyle.swift */; };
 		E030D938249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D937249692DA00D2E087 /* SquishableButtonStyle.swift */; };
 		E030D939249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D937249692DA00D2E087 /* SquishableButtonStyle.swift */; };
@@ -239,6 +240,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D64B40D1251CC1A400DFAD75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0D7129824967CC800173A38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0D713CE2496844400173A38;
+			remoteInfo = "Fruta macOS Widgets";
+		};
 		E0D712E02496805E00173A38 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E0D7129824967CC800173A38 /* Project object */;
@@ -256,6 +264,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D64B40D3251CC1A400DFAD75 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D64B40D0251CC1A400DFAD75 /* Fruta macOS Widgets.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E0D712E62496805E00173A38 /* Embed App Clips */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -682,11 +701,13 @@
 				E0D712A824967CC900173A38 /* Sources */,
 				E0D712A924967CC900173A38 /* Frameworks */,
 				E0D712AA24967CC900173A38 /* Resources */,
+				D64B40D3251CC1A400DFAD75 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E0FED4492496AB76005D3995 /* PBXTargetDependency */,
+				D64B40D2251CC1A400DFAD75 /* PBXTargetDependency */,
 			);
 			name = "Fruta macOS";
 			packageProductDependencies = (
@@ -1101,6 +1122,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D64B40D2251CC1A400DFAD75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0D713CE2496844400173A38 /* Fruta macOS Widgets */;
+			targetProxy = D64B40D1251CC1A400DFAD75 /* PBXContainerItemProxy */;
+		};
 		E0D712E12496805E00173A38 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E0D712D22496805D00173A38 /* Fruta iOS Clip */;
