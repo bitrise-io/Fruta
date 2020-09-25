@@ -6,6 +6,7 @@ A view presented to the user once they order a smoothie, and when it's ready to 
 */
 
 import SwiftUI
+import AuthenticationServices
 
 struct OrderPlacedView: View {
     @EnvironmentObject private var model: FrutaModel

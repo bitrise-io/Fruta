@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RewardsCardWidget: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: "RewardsCard", provider: Provider(), placeholder: RewardsCardPlaceholderView()) { entry in
+        StaticConfiguration(kind: "RewardsCard", provider: Provider()) { entry in
             RewardsCardEntryView(entry: entry)
         }
         .configurationDisplayName("Rewards Card")
@@ -21,14 +21,18 @@ struct RewardsCardWidget: Widget {
 
 extension RewardsCardWidget {
     struct Provider: TimelineProvider {
-        func snapshot(with context: Context, completion: @escaping (Entry) -> Void) {
+        func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
             completion(Entry(date: Date(), points: 4))
         }
         
-        func timeline(with context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
+        func getTimeline(in context: Context, completion: @escaping (Timeline<RewardsCardWidget.Entry>) -> Void) {
             let entry = Entry(date: Date(), points: 4)
             let timeline = Timeline(entries: [entry], policy: .never)
             completion(timeline)
+        }
+        
+        func placeholder(in context: Context) -> RewardsCardWidget.Entry {
+            Entry(date: Date(), points: 4)
         }
     }
 }

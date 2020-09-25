@@ -11,7 +11,7 @@ import Intents
 
 struct FeaturedSmoothieWidget: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: "FeaturedSmoothie", provider: Provider(), placeholder: FeaturedSmoothiePlaceholderView()) { entry in
+        StaticConfiguration(kind: "FeaturedSmoothie", provider: Provider()) { entry in
             FeaturedSmoothieEntryView(entry: entry)
         }
         .configurationDisplayName("Featured Smoothie")
@@ -21,12 +21,12 @@ struct FeaturedSmoothieWidget: Widget {
 
 extension FeaturedSmoothieWidget {
     struct Provider: TimelineProvider {
-        func snapshot(with context: Context, completion: @escaping (Entry) -> Void) {
+        func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
             let entry = Entry(date: Date(), smoothie: .berryBlue)
             completion(entry)
         }
         
-        func timeline(with context: Context, completion: @escaping (Timeline<FeaturedSmoothieWidget.Entry>) -> Void) {
+        func getTimeline(in context: Context, completion: @escaping (Timeline<FeaturedSmoothieWidget.Entry>) -> Void) {
             var entries: [Entry] = []
 
             let currentDate = Date()
@@ -39,6 +39,10 @@ extension FeaturedSmoothieWidget {
 
             let timeline = Timeline(entries: entries, policy: .atEnd)
             completion(timeline)
+        }
+        
+        func placeholder(in context: Context) -> FeaturedSmoothieWidget.Entry {
+            Entry(date: Date(), smoothie: .berryBlue)
         }
     }
 }
