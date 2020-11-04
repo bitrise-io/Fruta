@@ -8,7 +8,7 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.io.bitrise.fruta</string>
+		<string>group.io.bitrise.appcliptest</string>
 	</array>
 </dict>
 </plist>
