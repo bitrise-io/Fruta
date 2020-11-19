@@ -28,7 +28,7 @@ class FrutaUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
-        let berryBlueIngredientsOrangeBlueberryAndAvocado520CaloriesButton = app.tables/*@START_MENU_TOKEN@*/.buttons["Berry Blue\nIngredients: Orange, Blueberry, and Avocado.\n520 Calories"]/*[[".cells[\"Berry Blue\\nIngredients: Orange, Blueberry, and Avocado.\\n520 Calories\"].buttons[\"Berry Blue\\nIngredients: Orange, Blueberry, and Avocado.\\n520 Calories\"]",".buttons[\"Berry Blue\\nIngredients: Orange, Blueberry, and Avocado.\\n520 Calories\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let berryBlueIngredientsOrangeBlueberryAndAvocado520CaloriesButton = app.tables.buttons.firstMatch
         berryBlueIngredientsOrangeBlueberryAndAvocado520CaloriesButton.tap()
         let favoriteButton =  app.navigationBars["Berry Blue"].buttons["love"]
         let exist = favoriteButton.waitForExistence(timeout: 5)
