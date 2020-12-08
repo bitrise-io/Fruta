@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RewardsCardWidget: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: "RewardsCard", provider: Provider(), placeholder: RewardsCardPlaceholderView()) { entry in
+        StaticConfiguration(kind: "RewardsCard", provider: Provider()) { entry in
             RewardsCardEntryView(entry: entry)
         }
         .configurationDisplayName("Rewards Card")
@@ -21,11 +21,17 @@ struct RewardsCardWidget: Widget {
 
 extension RewardsCardWidget {
     struct Provider: TimelineProvider {
-        func snapshot(with context: Context, completion: @escaping (Entry) -> Void) {
+        typealias Entry = RewardsCardWidget.Entry
+        
+        func placeholder(in context: Context) -> Entry {
+            Entry(date: Date(), points: 4)
+        }
+    
+        func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
             completion(Entry(date: Date(), points: 4))
         }
         
-        func timeline(with context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
+        func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
             let entry = Entry(date: Date(), points: 4)
             let timeline = Timeline(entries: [entry], policy: .never)
             completion(timeline)
@@ -37,12 +43,6 @@ extension RewardsCardWidget {
     struct Entry: TimelineEntry {
         var date: Date
         var points: Int
-    }
-}
-
-struct RewardsCardPlaceholderView: View {
-    var body: some View {
-        RewardsCardEntryView(entry: .init(date: Date(), points: 4))
     }
 }
 
@@ -66,8 +66,9 @@ public struct RewardsCardEntryView: View {
 struct RewardsCardWidget_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            RewardsCardPlaceholderView()
+            RewardsCardEntryView(entry: .init(date: Date(), points: 4))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
+                .redacted(reason: .placeholder)
             RewardsCardEntryView(entry: .init(date: Date(), points: 8))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
             RewardsCardEntryView(entry: .init(date: Date(), points: 2))

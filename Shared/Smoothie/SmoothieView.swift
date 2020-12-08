@@ -28,10 +28,6 @@ struct SmoothieView: View {
     @State private var presentingAppStoreOverlay = false
     #endif
     
-    var isFavorite: Bool {
-        model.favoriteSmoothieIDs.contains(smoothie.id)
-    }
-    
     var bottomBar: some View {
         VStack(spacing: 0) {
             Divider()
@@ -50,36 +46,21 @@ struct SmoothieView: View {
     
     var body: some View {
         Group {
-            #if APPCLIP
-            container
-                .appStoreOverlay(isPresented: $presentingAppStoreOverlay) {
-                    SKOverlay.AppClipConfiguration(position: .bottom)
-                }
-            #elseif os(iOS)
+            #if os(iOS)
             container
             #else
             container
-                .frame(minWidth: 500, idealWidth: 700, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+                .frame(minWidth: 500, idealWidth: 700, maxWidth: .infinity, minHeight: 400, maxHeight: .infinity)
             #endif
         }
-        .background(Rectangle().fill(BackgroundStyle()).edgesIgnoringSafeArea(.all))
+        .background(Rectangle().fill(BackgroundStyle()).ignoresSafeArea())
         .navigationTitle(smoothie.title)
         .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button(action: { model.toggleFavorite(smoothie: smoothie) }) {
-                    Label("Favorite", systemImage: isFavorite ? "heart.fill" : "heart")
-                        .labelStyle(IconOnlyLabelStyle())
-                }
-                .accessibility(label: Text("\(isFavorite ? "Remove from" : "Add to") Favorites"))
-            }
+            SmoothieFavoriteButton(smoothie: smoothie)
         }
         .sheet(isPresented: $presentingOrderPlacedSheet) {
             VStack(spacing: 0) {
-                #if APPCLIP
-                OrderPlacedView(presentingAppStoreOverlay: $presentingAppStoreOverlay)
-                #else
                 OrderPlacedView()
-                #endif
                 
                 #if os(macOS)
                 Divider()
@@ -127,7 +108,7 @@ struct SmoothieView: View {
             .accessibility(hidden: selectedIngredientID != nil)
 
             VisualEffectBlur()
-                .edgesIgnoringSafeArea(.all)
+                .ignoresSafeArea()
                 .opacity(selectedIngredientID != nil ? 1 : 0)
             
             ForEach(smoothie.menuIngredients) { measuredIngredient in

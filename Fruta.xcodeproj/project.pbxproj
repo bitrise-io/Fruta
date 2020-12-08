@@ -14,6 +14,11 @@
 		61FB2FE3249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */; };
 		61FB2FE4249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */; };
 		61FB2FE62499555800E39B64 /* AppClip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61FB2FE52499555800E39B64 /* AppClip.framework */; };
+		64E20630257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E2062F257F9C330008C0C8 /* SmoothieFavoriteButton.swift */; };
+		64E20631257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E2062F257F9C330008C0C8 /* SmoothieFavoriteButton.swift */; };
+		64E20632257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E2062F257F9C330008C0C8 /* SmoothieFavoriteButton.swift */; };
+		64E20633257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E2062F257F9C330008C0C8 /* SmoothieFavoriteButton.swift */; };
+		64E20634257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E2062F257F9C330008C0C8 /* SmoothieFavoriteButton.swift */; };
 		E030D936249692C200D2E087 /* CircleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D935249692C200D2E087 /* CircleToggleStyle.swift */; };
 		E030D938249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D937249692DA00D2E087 /* SquishableButtonStyle.swift */; };
 		E030D939249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D937249692DA00D2E087 /* SquishableButtonStyle.swift */; };
@@ -304,6 +309,7 @@
 		61F36D9A2496F40A00E7AA4D /* SmoothieLab.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SmoothieLab.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemSmoothieButton.swift; sourceTree = "<group>"; };
 		61FB2FE52499555800E39B64 /* AppClip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppClip.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AppClip.framework; sourceTree = DEVELOPER_DIR; };
+		64E2062F257F9C330008C0C8 /* SmoothieFavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothieFavoriteButton.swift; sourceTree = "<group>"; };
 		99FF75FD119F6C4615674C49 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A594677E73BEF8AA1F7A859F /* ACKNOWLEDGMENTS.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = ACKNOWLEDGMENTS.txt; sourceTree = "<group>"; };
 		C640196161A8E05832EA149C /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
@@ -569,6 +575,7 @@
 				E0567180249690B30018307A /* SmoothieList.swift */,
 				E0567186249690C70018307A /* SmoothieRow.swift */,
 				61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */,
+				64E2062F257F9C330008C0C8 /* SmoothieFavoriteButton.swift */,
 			);
 			path = Smoothie;
 			sourceTree = "<group>";
@@ -906,6 +913,7 @@
 				E05671C3249691F40018307A /* IngredientGraphic.swift in Sources */,
 				E091DD55249686BE002DB402 /* AppSidebarNavigation.swift in Sources */,
 				E091DD2B249685FC002DB402 /* Store.swift in Sources */,
+				64E20630257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */,
 				E0567169249690580018307A /* SmoothieMenu.swift in Sources */,
 				E05671ED249692970018307A /* AnimatableFontModifier.swift in Sources */,
 				E056715D249690200018307A /* Smoothie.swift in Sources */,
@@ -936,6 +944,7 @@
 				E030D93A249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */,
 				E091DD512496868B002DB402 /* PaymentButton.swift in Sources */,
 				E0D712CE24967FF900173A38 /* VisualEffectBlur.swift in Sources */,
+				64E20632257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */,
 				E0D712B324967CC900173A38 /* ContentView.swift in Sources */,
 				E091DD27249685E1002DB402 /* FrutaModel.swift in Sources */,
 				E030D93E249692E800D2E087 /* CircleToggleStyle.swift in Sources */,
@@ -1003,6 +1012,7 @@
 				E05671BE249691DD0018307A /* IngredientCard.swift in Sources */,
 				E05671D0249692280018307A /* CardActionButton.swift in Sources */,
 				E091DD26249685E1002DB402 /* FrutaModel.swift in Sources */,
+				64E20631257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */,
 				E091DD2C249685FC002DB402 /* Store.swift in Sources */,
 				E056716A249690580018307A /* SmoothieMenu.swift in Sources */,
 				E05671CA2496920C0018307A /* FlipView.swift in Sources */,
@@ -1024,6 +1034,7 @@
 			files = (
 				E091DD522496868B002DB402 /* PaymentButton.swift in Sources */,
 				E091DD2E249685FC002DB402 /* Store.swift in Sources */,
+				64E20633257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */,
 				E030D956249694E500D2E087 /* ContentView.swift in Sources */,
 				E030D94E2496933E00D2E087 /* FeaturedSmoothieWidget.swift in Sources */,
 				E0567190249690DF0018307A /* RecipeList.swift in Sources */,
@@ -1108,6 +1119,7 @@
 				E05671732496906B0018307A /* FavoriteSmoothies.swift in Sources */,
 				E030D940249692E900D2E087 /* CircleToggleStyle.swift in Sources */,
 				E0567197249690F30018307A /* RecipeUnlockButton.swift in Sources */,
+				64E20634257F9C330008C0C8 /* SmoothieFavoriteButton.swift in Sources */,
 				E0567185249690B30018307A /* SmoothieList.swift in Sources */,
 				E05671AF2496914A0018307A /* Ingredient.swift in Sources */,
 				E030D946249692FC00D2E087 /* Animations.swift in Sources */,
@@ -1264,8 +1276,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1273,9 +1286,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest;
 				PRODUCT_NAME = Fruta;
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1290,8 +1303,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1299,9 +1313,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest;
 				PRODUCT_NAME = Fruta;
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1317,10 +1331,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
@@ -1329,9 +1343,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest;
 				PRODUCT_NAME = Fruta;
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1345,10 +1359,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = macOS/Info.plist;
@@ -1357,9 +1371,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest;
 				PRODUCT_NAME = Fruta;
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -1372,10 +1386,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "iOS Clip/iOSClip.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "iOS Clip/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1383,9 +1397,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta.Clip;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Clip Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG APPCLIP";
 				SWIFT_VERSION = 5.0;
@@ -1400,10 +1414,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "iOS Clip/iOSClip.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "iOS Clip/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1411,9 +1425,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.fruta.Clip;
+				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Clip Development";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = APPCLIP;
 				SWIFT_VERSION = 5.0;
@@ -1428,9 +1442,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				INFOPLIST_FILE = "iOS Widgets/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1438,9 +1452,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.ios-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.appcliptest.ios-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Widgets";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1454,9 +1468,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				INFOPLIST_FILE = "iOS Widgets/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1464,9 +1478,9 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.ios-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.appcliptest.ios-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta iOS Widgets";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1482,9 +1496,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "macOS Widgets/macOSWidgets.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS Widgets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1493,9 +1507,9 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.macos-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.appcliptest.macos-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Widgets";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1509,9 +1523,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "macOS Widgets/macOSWidgets.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS Widgets/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1520,9 +1534,9 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.16;
-				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.fruta.macos-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bitrise.appcliptest.macos-widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Fruta macOS Widgets";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
