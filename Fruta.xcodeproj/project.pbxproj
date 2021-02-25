@@ -9,23 +9,18 @@
 /* Begin PBXBuildFile section */
 		61F36D9C2496F54300E7AA4D /* NutritionFacts in Frameworks */ = {isa = PBXBuildFile; productRef = 61F36D9B2496F54300E7AA4D /* NutritionFacts */; };
 		61FB2FE0249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */; };
-		61FB2FE1249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */; };
 		61FB2FE2249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */; };
 		61FB2FE3249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */; };
 		61FB2FE4249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FB2FDF249948EB00E39B64 /* RedeemSmoothieButton.swift */; };
-		61FB2FE62499555800E39B64 /* AppClip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61FB2FE52499555800E39B64 /* AppClip.framework */; };
 		E030D936249692C200D2E087 /* CircleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D935249692C200D2E087 /* CircleToggleStyle.swift */; };
 		E030D938249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D937249692DA00D2E087 /* SquishableButtonStyle.swift */; };
-		E030D939249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D937249692DA00D2E087 /* SquishableButtonStyle.swift */; };
 		E030D93A249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D937249692DA00D2E087 /* SquishableButtonStyle.swift */; };
 		E030D93B249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D937249692DA00D2E087 /* SquishableButtonStyle.swift */; };
 		E030D93C249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D937249692DA00D2E087 /* SquishableButtonStyle.swift */; };
-		E030D93D249692E700D2E087 /* CircleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D935249692C200D2E087 /* CircleToggleStyle.swift */; };
 		E030D93E249692E800D2E087 /* CircleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D935249692C200D2E087 /* CircleToggleStyle.swift */; };
 		E030D93F249692E800D2E087 /* CircleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D935249692C200D2E087 /* CircleToggleStyle.swift */; };
 		E030D940249692E900D2E087 /* CircleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D935249692C200D2E087 /* CircleToggleStyle.swift */; };
 		E030D942249692FC00D2E087 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D941249692FC00D2E087 /* Animations.swift */; };
-		E030D943249692FC00D2E087 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D941249692FC00D2E087 /* Animations.swift */; };
 		E030D944249692FC00D2E087 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D941249692FC00D2E087 /* Animations.swift */; };
 		E030D945249692FC00D2E087 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D941249692FC00D2E087 /* Animations.swift */; };
 		E030D946249692FC00D2E087 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D941249692FC00D2E087 /* Animations.swift */; };
@@ -35,188 +30,148 @@
 		E030D94C2496932B00D2E087 /* RewardsCardWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D94A2496932B00D2E087 /* RewardsCardWidget.swift */; };
 		E030D94E2496933E00D2E087 /* FeaturedSmoothieWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D94D2496933E00D2E087 /* FeaturedSmoothieWidget.swift */; };
 		E030D94F2496933E00D2E087 /* FeaturedSmoothieWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D94D2496933E00D2E087 /* FeaturedSmoothieWidget.swift */; };
-		E030D951249694A600D2E087 /* FrutaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7129D24967CC800173A38 /* FrutaApp.swift */; };
-		E030D952249694AE00D2E087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D7129F24967CC900173A38 /* Assets.xcassets */; };
 		E030D953249694AF00D2E087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D7129F24967CC900173A38 /* Assets.xcassets */; };
 		E030D954249694AF00D2E087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D7129F24967CC900173A38 /* Assets.xcassets */; };
-		E030D955249694E400D2E087 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7129E24967CC800173A38 /* ContentView.swift */; };
 		E030D956249694E500D2E087 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7129E24967CC800173A38 /* ContentView.swift */; };
 		E030D957249694E500D2E087 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D7129E24967CC800173A38 /* ContentView.swift */; };
-		E030D9582496956000D2E087 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D712BE24967E4800173A38 /* VisualEffectBlur.swift */; };
 		E030D9592496956200D2E087 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D712BE24967E4800173A38 /* VisualEffectBlur.swift */; };
-		E030D95A2496956C00D2E087 /* AppTabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D712C024967E5800173A38 /* AppTabNavigation.swift */; };
 		E030D95B2496956D00D2E087 /* AppTabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D712C024967E5800173A38 /* AppTabNavigation.swift */; };
 		E030D95C2496957B00D2E087 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D712CD24967FF900173A38 /* VisualEffectBlur.swift */; };
-		E030D9872496988800D2E087 /* NutritionFacts in Frameworks */ = {isa = PBXBuildFile; productRef = E030D9862496988800D2E087 /* NutritionFacts */; };
 		E030D9892496989800D2E087 /* NutritionFacts in Frameworks */ = {isa = PBXBuildFile; productRef = E030D9882496989800D2E087 /* NutritionFacts */; };
 		E030D98B24969FD100D2E087 /* NutritionFacts in Frameworks */ = {isa = PBXBuildFile; productRef = E030D98A24969FD100D2E087 /* NutritionFacts */; };
 		E056715D249690200018307A /* Smoothie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056715C249690200018307A /* Smoothie.swift */; };
-		E056715E249690200018307A /* Smoothie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056715C249690200018307A /* Smoothie.swift */; };
 		E056715F249690200018307A /* Smoothie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056715C249690200018307A /* Smoothie.swift */; };
 		E0567160249690200018307A /* Smoothie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056715C249690200018307A /* Smoothie.swift */; };
 		E0567161249690200018307A /* Smoothie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056715C249690200018307A /* Smoothie.swift */; };
 		E0567163249690430018307A /* Smoothie+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567162249690430018307A /* Smoothie+SwiftUI.swift */; };
-		E0567164249690430018307A /* Smoothie+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567162249690430018307A /* Smoothie+SwiftUI.swift */; };
 		E0567165249690430018307A /* Smoothie+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567162249690430018307A /* Smoothie+SwiftUI.swift */; };
 		E0567166249690430018307A /* Smoothie+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567162249690430018307A /* Smoothie+SwiftUI.swift */; };
 		E0567167249690430018307A /* Smoothie+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567162249690430018307A /* Smoothie+SwiftUI.swift */; };
 		E0567169249690580018307A /* SmoothieMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567168249690580018307A /* SmoothieMenu.swift */; };
-		E056716A249690580018307A /* SmoothieMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567168249690580018307A /* SmoothieMenu.swift */; };
 		E056716B249690580018307A /* SmoothieMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567168249690580018307A /* SmoothieMenu.swift */; };
 		E056716C249690580018307A /* SmoothieMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567168249690580018307A /* SmoothieMenu.swift */; };
 		E056716D249690580018307A /* SmoothieMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567168249690580018307A /* SmoothieMenu.swift */; };
 		E056716F2496906B0018307A /* FavoriteSmoothies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056716E2496906B0018307A /* FavoriteSmoothies.swift */; };
-		E05671702496906B0018307A /* FavoriteSmoothies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056716E2496906B0018307A /* FavoriteSmoothies.swift */; };
 		E05671712496906B0018307A /* FavoriteSmoothies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056716E2496906B0018307A /* FavoriteSmoothies.swift */; };
 		E05671722496906B0018307A /* FavoriteSmoothies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056716E2496906B0018307A /* FavoriteSmoothies.swift */; };
 		E05671732496906B0018307A /* FavoriteSmoothies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056716E2496906B0018307A /* FavoriteSmoothies.swift */; };
 		E0567175249690840018307A /* SmoothieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567174249690840018307A /* SmoothieView.swift */; };
-		E0567176249690840018307A /* SmoothieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567174249690840018307A /* SmoothieView.swift */; };
 		E0567177249690840018307A /* SmoothieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567174249690840018307A /* SmoothieView.swift */; };
 		E0567178249690840018307A /* SmoothieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567174249690840018307A /* SmoothieView.swift */; };
 		E0567179249690840018307A /* SmoothieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567174249690840018307A /* SmoothieView.swift */; };
 		E056717B2496909B0018307A /* SmoothieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056717A2496909B0018307A /* SmoothieHeaderView.swift */; };
-		E056717C2496909B0018307A /* SmoothieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056717A2496909B0018307A /* SmoothieHeaderView.swift */; };
 		E056717D2496909B0018307A /* SmoothieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056717A2496909B0018307A /* SmoothieHeaderView.swift */; };
 		E056717E2496909B0018307A /* SmoothieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056717A2496909B0018307A /* SmoothieHeaderView.swift */; };
 		E056717F2496909B0018307A /* SmoothieHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056717A2496909B0018307A /* SmoothieHeaderView.swift */; };
 		E0567181249690B30018307A /* SmoothieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567180249690B30018307A /* SmoothieList.swift */; };
-		E0567182249690B30018307A /* SmoothieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567180249690B30018307A /* SmoothieList.swift */; };
 		E0567183249690B30018307A /* SmoothieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567180249690B30018307A /* SmoothieList.swift */; };
 		E0567184249690B30018307A /* SmoothieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567180249690B30018307A /* SmoothieList.swift */; };
 		E0567185249690B30018307A /* SmoothieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567180249690B30018307A /* SmoothieList.swift */; };
 		E0567187249690C70018307A /* SmoothieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567186249690C70018307A /* SmoothieRow.swift */; };
-		E0567188249690C70018307A /* SmoothieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567186249690C70018307A /* SmoothieRow.swift */; };
 		E0567189249690C70018307A /* SmoothieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567186249690C70018307A /* SmoothieRow.swift */; };
 		E056718A249690C70018307A /* SmoothieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567186249690C70018307A /* SmoothieRow.swift */; };
 		E056718B249690C70018307A /* SmoothieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567186249690C70018307A /* SmoothieRow.swift */; };
 		E056718D249690DF0018307A /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056718C249690DF0018307A /* RecipeList.swift */; };
-		E056718E249690DF0018307A /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056718C249690DF0018307A /* RecipeList.swift */; };
 		E056718F249690DF0018307A /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056718C249690DF0018307A /* RecipeList.swift */; };
 		E0567190249690DF0018307A /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056718C249690DF0018307A /* RecipeList.swift */; };
 		E0567191249690DF0018307A /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056718C249690DF0018307A /* RecipeList.swift */; };
 		E0567193249690F30018307A /* RecipeUnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567192249690F30018307A /* RecipeUnlockButton.swift */; };
-		E0567194249690F30018307A /* RecipeUnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567192249690F30018307A /* RecipeUnlockButton.swift */; };
 		E0567195249690F30018307A /* RecipeUnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567192249690F30018307A /* RecipeUnlockButton.swift */; };
 		E0567196249690F30018307A /* RecipeUnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567192249690F30018307A /* RecipeUnlockButton.swift */; };
 		E0567197249690F30018307A /* RecipeUnlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567192249690F30018307A /* RecipeUnlockButton.swift */; };
 		E0567199249691060018307A /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567198249691060018307A /* RecipeView.swift */; };
-		E056719A249691060018307A /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567198249691060018307A /* RecipeView.swift */; };
 		E056719B249691060018307A /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567198249691060018307A /* RecipeView.swift */; };
 		E056719C249691060018307A /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567198249691060018307A /* RecipeView.swift */; };
 		E056719D249691060018307A /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0567198249691060018307A /* RecipeView.swift */; };
 		E056719F2496911C0018307A /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056719E2496911C0018307A /* MeasurementView.swift */; };
-		E05671A02496911C0018307A /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056719E2496911C0018307A /* MeasurementView.swift */; };
 		E05671A12496911C0018307A /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056719E2496911C0018307A /* MeasurementView.swift */; };
 		E05671A22496911C0018307A /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056719E2496911C0018307A /* MeasurementView.swift */; };
 		E05671A32496911C0018307A /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E056719E2496911C0018307A /* MeasurementView.swift */; };
 		E05671A5249691320018307A /* MeasuredIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671A4249691320018307A /* MeasuredIngredient.swift */; };
-		E05671A6249691320018307A /* MeasuredIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671A4249691320018307A /* MeasuredIngredient.swift */; };
 		E05671A7249691320018307A /* MeasuredIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671A4249691320018307A /* MeasuredIngredient.swift */; };
 		E05671A8249691320018307A /* MeasuredIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671A4249691320018307A /* MeasuredIngredient.swift */; };
 		E05671A9249691320018307A /* MeasuredIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671A4249691320018307A /* MeasuredIngredient.swift */; };
 		E05671AB2496914A0018307A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671AA2496914A0018307A /* Ingredient.swift */; };
-		E05671AC2496914A0018307A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671AA2496914A0018307A /* Ingredient.swift */; };
 		E05671AD2496914A0018307A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671AA2496914A0018307A /* Ingredient.swift */; };
 		E05671AE2496914A0018307A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671AA2496914A0018307A /* Ingredient.swift */; };
 		E05671AF2496914A0018307A /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671AA2496914A0018307A /* Ingredient.swift */; };
 		E05671B12496915D0018307A /* Ingredient+NutritionFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B02496915D0018307A /* Ingredient+NutritionFacts.swift */; };
-		E05671B22496915D0018307A /* Ingredient+NutritionFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B02496915D0018307A /* Ingredient+NutritionFacts.swift */; };
 		E05671B32496915D0018307A /* Ingredient+NutritionFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B02496915D0018307A /* Ingredient+NutritionFacts.swift */; };
 		E05671B42496915D0018307A /* Ingredient+NutritionFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B02496915D0018307A /* Ingredient+NutritionFacts.swift */; };
 		E05671B52496915D0018307A /* Ingredient+NutritionFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B02496915D0018307A /* Ingredient+NutritionFacts.swift */; };
 		E05671B7249691720018307A /* Ingredient+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B6249691720018307A /* Ingredient+SwiftUI.swift */; };
-		E05671B8249691720018307A /* Ingredient+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B6249691720018307A /* Ingredient+SwiftUI.swift */; };
 		E05671B9249691720018307A /* Ingredient+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B6249691720018307A /* Ingredient+SwiftUI.swift */; };
 		E05671BA249691720018307A /* Ingredient+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B6249691720018307A /* Ingredient+SwiftUI.swift */; };
 		E05671BB249691720018307A /* Ingredient+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671B6249691720018307A /* Ingredient+SwiftUI.swift */; };
 		E05671BD249691DD0018307A /* IngredientCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671BC249691DD0018307A /* IngredientCard.swift */; };
-		E05671BE249691DD0018307A /* IngredientCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671BC249691DD0018307A /* IngredientCard.swift */; };
 		E05671BF249691DD0018307A /* IngredientCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671BC249691DD0018307A /* IngredientCard.swift */; };
 		E05671C0249691DD0018307A /* IngredientCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671BC249691DD0018307A /* IngredientCard.swift */; };
 		E05671C1249691DD0018307A /* IngredientCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671BC249691DD0018307A /* IngredientCard.swift */; };
 		E05671C3249691F40018307A /* IngredientGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C2249691F40018307A /* IngredientGraphic.swift */; };
-		E05671C4249691F40018307A /* IngredientGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C2249691F40018307A /* IngredientGraphic.swift */; };
 		E05671C5249691F40018307A /* IngredientGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C2249691F40018307A /* IngredientGraphic.swift */; };
 		E05671C6249691F40018307A /* IngredientGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C2249691F40018307A /* IngredientGraphic.swift */; };
 		E05671C7249691F40018307A /* IngredientGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C2249691F40018307A /* IngredientGraphic.swift */; };
 		E05671C92496920C0018307A /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C82496920C0018307A /* FlipView.swift */; };
-		E05671CA2496920C0018307A /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C82496920C0018307A /* FlipView.swift */; };
 		E05671CB2496920C0018307A /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C82496920C0018307A /* FlipView.swift */; };
 		E05671CC2496920C0018307A /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C82496920C0018307A /* FlipView.swift */; };
 		E05671CD2496920C0018307A /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671C82496920C0018307A /* FlipView.swift */; };
 		E05671CF249692280018307A /* CardActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671CE249692280018307A /* CardActionButton.swift */; };
-		E05671D0249692280018307A /* CardActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671CE249692280018307A /* CardActionButton.swift */; };
 		E05671D1249692280018307A /* CardActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671CE249692280018307A /* CardActionButton.swift */; };
 		E05671D2249692280018307A /* CardActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671CE249692280018307A /* CardActionButton.swift */; };
 		E05671D3249692280018307A /* CardActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671CE249692280018307A /* CardActionButton.swift */; };
 		E05671D52496923A0018307A /* BubbleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671D42496923A0018307A /* BubbleBackground.swift */; };
-		E05671D62496923A0018307A /* BubbleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671D42496923A0018307A /* BubbleBackground.swift */; };
 		E05671D72496923A0018307A /* BubbleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671D42496923A0018307A /* BubbleBackground.swift */; };
 		E05671D82496923A0018307A /* BubbleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671D42496923A0018307A /* BubbleBackground.swift */; };
 		E05671D92496923A0018307A /* BubbleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671D42496923A0018307A /* BubbleBackground.swift */; };
 		E05671DB2496924E0018307A /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671DA2496924E0018307A /* BubbleView.swift */; };
-		E05671DC2496924E0018307A /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671DA2496924E0018307A /* BubbleView.swift */; };
 		E05671DD2496924E0018307A /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671DA2496924E0018307A /* BubbleView.swift */; };
 		E05671DE2496924E0018307A /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671DA2496924E0018307A /* BubbleView.swift */; };
 		E05671DF2496924E0018307A /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671DA2496924E0018307A /* BubbleView.swift */; };
 		E05671E1249692600018307A /* CountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E0249692600018307A /* CountButton.swift */; };
-		E05671E2249692600018307A /* CountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E0249692600018307A /* CountButton.swift */; };
 		E05671E3249692600018307A /* CountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E0249692600018307A /* CountButton.swift */; };
 		E05671E4249692600018307A /* CountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E0249692600018307A /* CountButton.swift */; };
 		E05671E5249692600018307A /* CountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E0249692600018307A /* CountButton.swift */; };
 		E05671E7249692800018307A /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E6249692800018307A /* StepperView.swift */; };
-		E05671E8249692800018307A /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E6249692800018307A /* StepperView.swift */; };
 		E05671E9249692800018307A /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E6249692800018307A /* StepperView.swift */; };
 		E05671EA249692800018307A /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E6249692800018307A /* StepperView.swift */; };
 		E05671EB249692800018307A /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671E6249692800018307A /* StepperView.swift */; };
 		E05671ED249692970018307A /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671EC249692970018307A /* AnimatableFontModifier.swift */; };
-		E05671EE249692970018307A /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671EC249692970018307A /* AnimatableFontModifier.swift */; };
 		E05671EF249692970018307A /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671EC249692970018307A /* AnimatableFontModifier.swift */; };
 		E05671F0249692970018307A /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671EC249692970018307A /* AnimatableFontModifier.swift */; };
 		E05671F1249692970018307A /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05671EC249692970018307A /* AnimatableFontModifier.swift */; };
 		E091DD25249685E1002DB402 /* FrutaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD24249685E1002DB402 /* FrutaModel.swift */; };
-		E091DD26249685E1002DB402 /* FrutaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD24249685E1002DB402 /* FrutaModel.swift */; };
 		E091DD27249685E1002DB402 /* FrutaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD24249685E1002DB402 /* FrutaModel.swift */; };
 		E091DD28249685E1002DB402 /* FrutaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD24249685E1002DB402 /* FrutaModel.swift */; };
 		E091DD29249685E1002DB402 /* FrutaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD24249685E1002DB402 /* FrutaModel.swift */; };
 		E091DD2B249685FC002DB402 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD2A249685FC002DB402 /* Store.swift */; };
-		E091DD2C249685FC002DB402 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD2A249685FC002DB402 /* Store.swift */; };
 		E091DD2D249685FC002DB402 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD2A249685FC002DB402 /* Store.swift */; };
 		E091DD2E249685FC002DB402 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD2A249685FC002DB402 /* Store.swift */; };
 		E091DD2F249685FC002DB402 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD2A249685FC002DB402 /* Store.swift */; };
 		E091DD312496860B002DB402 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD302496860B002DB402 /* Account.swift */; };
-		E091DD322496860B002DB402 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD302496860B002DB402 /* Account.swift */; };
 		E091DD332496860B002DB402 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD302496860B002DB402 /* Account.swift */; };
 		E091DD342496860B002DB402 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD302496860B002DB402 /* Account.swift */; };
 		E091DD352496860B002DB402 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD302496860B002DB402 /* Account.swift */; };
 		E091DD3724968624002DB402 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3624968624002DB402 /* Order.swift */; };
-		E091DD3824968624002DB402 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3624968624002DB402 /* Order.swift */; };
 		E091DD3924968624002DB402 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3624968624002DB402 /* Order.swift */; };
 		E091DD3A24968624002DB402 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3624968624002DB402 /* Order.swift */; };
 		E091DD3B24968624002DB402 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3624968624002DB402 /* Order.swift */; };
 		E091DD3D24968642002DB402 /* OrderPlacedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3C24968642002DB402 /* OrderPlacedView.swift */; };
-		E091DD3E24968642002DB402 /* OrderPlacedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3C24968642002DB402 /* OrderPlacedView.swift */; };
 		E091DD3F24968642002DB402 /* OrderPlacedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3C24968642002DB402 /* OrderPlacedView.swift */; };
 		E091DD4024968642002DB402 /* OrderPlacedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3C24968642002DB402 /* OrderPlacedView.swift */; };
 		E091DD4124968642002DB402 /* OrderPlacedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD3C24968642002DB402 /* OrderPlacedView.swift */; };
 		E091DD4324968662002DB402 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4224968662002DB402 /* RewardsView.swift */; };
-		E091DD4424968662002DB402 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4224968662002DB402 /* RewardsView.swift */; };
 		E091DD4524968662002DB402 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4224968662002DB402 /* RewardsView.swift */; };
 		E091DD4624968662002DB402 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4224968662002DB402 /* RewardsView.swift */; };
 		E091DD4724968662002DB402 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4224968662002DB402 /* RewardsView.swift */; };
 		E091DD4924968676002DB402 /* RewardsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4824968676002DB402 /* RewardsCard.swift */; };
-		E091DD4A24968676002DB402 /* RewardsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4824968676002DB402 /* RewardsCard.swift */; };
 		E091DD4B24968676002DB402 /* RewardsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4824968676002DB402 /* RewardsCard.swift */; };
 		E091DD4C24968676002DB402 /* RewardsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4824968676002DB402 /* RewardsCard.swift */; };
 		E091DD4D24968676002DB402 /* RewardsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4824968676002DB402 /* RewardsCard.swift */; };
 		E091DD4F2496868B002DB402 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4E2496868B002DB402 /* PaymentButton.swift */; };
-		E091DD502496868B002DB402 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4E2496868B002DB402 /* PaymentButton.swift */; };
 		E091DD512496868B002DB402 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4E2496868B002DB402 /* PaymentButton.swift */; };
 		E091DD522496868B002DB402 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4E2496868B002DB402 /* PaymentButton.swift */; };
 		E091DD532496868B002DB402 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD4E2496868B002DB402 /* PaymentButton.swift */; };
 		E091DD55249686BE002DB402 /* AppSidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD54249686BE002DB402 /* AppSidebarNavigation.swift */; };
-		E091DD56249686BE002DB402 /* AppSidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD54249686BE002DB402 /* AppSidebarNavigation.swift */; };
 		E091DD57249686BE002DB402 /* AppSidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD54249686BE002DB402 /* AppSidebarNavigation.swift */; };
 		E091DD58249686BE002DB402 /* AppSidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD54249686BE002DB402 /* AppSidebarNavigation.swift */; };
 		E091DD59249686BE002DB402 /* AppSidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091DD54249686BE002DB402 /* AppSidebarNavigation.swift */; };
@@ -229,7 +184,6 @@
 		E0D712BF24967E4800173A38 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D712BE24967E4800173A38 /* VisualEffectBlur.swift */; };
 		E0D712C124967E5800173A38 /* AppTabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D712C024967E5800173A38 /* AppTabNavigation.swift */; };
 		E0D712CE24967FF900173A38 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D712CD24967FF900173A38 /* VisualEffectBlur.swift */; };
-		E0D712E22496805E00173A38 /* Fruta iOS Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = E0D712D32496805D00173A38 /* Fruta iOS Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E0D713A6249683BA00173A38 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D713A5249683BA00173A38 /* WidgetKit.framework */; };
 		E0D713A8249683BA00173A38 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D713A7249683BA00173A38 /* SwiftUI.framework */; };
 		E0D713B1249683BA00173A38 /* Fruta iOS Widgets.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E0D713A3249683BA00173A38 /* Fruta iOS Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -239,13 +193,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E0D712E02496805E00173A38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E0D7129824967CC800173A38 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E0D712D22496805D00173A38;
-			remoteInfo = "Fruta Clip";
-		};
 		E0D713AF249683BA00173A38 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E0D7129824967CC800173A38 /* Project object */;
@@ -262,7 +209,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
 			dstSubfolderSpec = 16;
 			files = (
-				E0D712E22496805E00173A38 /* Fruta iOS Clip.app in Embed App Clips */,
 			);
 			name = "Embed App Clips";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +287,6 @@
 		E0D712BE24967E4800173A38 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		E0D712C024967E5800173A38 /* AppTabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabNavigation.swift; sourceTree = "<group>"; };
 		E0D712CD24967FF900173A38 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
-		E0D712D32496805D00173A38 /* Fruta iOS Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fruta iOS Clip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D712DE2496805E00173A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0D712DF2496805E00173A38 /* iOSClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSClip.entitlements; sourceTree = "<group>"; };
 		E0D713A3249683BA00173A38 /* Fruta iOS Widgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Fruta iOS Widgets.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -368,15 +313,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0FED44B2496ABDF005D3995 /* NutritionFacts in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0D712D02496805D00173A38 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				61FB2FE62499555800E39B64 /* AppClip.framework in Frameworks */,
-				E030D9872496988800D2E087 /* NutritionFacts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +414,6 @@
 			children = (
 				E0D712A424967CC900173A38 /* Fruta.app */,
 				E0D712AC24967CC900173A38 /* Fruta.app */,
-				E0D712D32496805D00173A38 /* Fruta iOS Clip.app */,
 				E0D713A3249683BA00173A38 /* Fruta iOS Widgets.appex */,
 				E0D713CF2496844400173A38 /* Fruta macOS Widgets.appex */,
 			);
@@ -664,7 +599,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E0D712E12496805E00173A38 /* PBXTargetDependency */,
 				E0D713B0249683BA00173A38 /* PBXTargetDependency */,
 			);
 			name = "Fruta iOS";
@@ -695,26 +629,6 @@
 			productName = macOS;
 			productReference = E0D712AC24967CC900173A38 /* Fruta.app */;
 			productType = "com.apple.product-type.application";
-		};
-		E0D712D22496805D00173A38 /* Fruta iOS Clip */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E0D712E32496805E00173A38 /* Build configuration list for PBXNativeTarget "Fruta iOS Clip" */;
-			buildPhases = (
-				E0D712CF2496805D00173A38 /* Sources */,
-				E0D712D02496805D00173A38 /* Frameworks */,
-				E0D712D12496805D00173A38 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Fruta iOS Clip";
-			packageProductDependencies = (
-				E030D9862496988800D2E087 /* NutritionFacts */,
-			);
-			productName = "Fruta Clip";
-			productReference = E0D712D32496805D00173A38 /* Fruta iOS Clip.app */;
-			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
 		E0D713A2249683BA00173A38 /* Fruta iOS Widgets */ = {
 			isa = PBXNativeTarget;
@@ -772,9 +686,6 @@
 					E0D712AB24967CC900173A38 = {
 						CreatedOnToolsVersion = 12.0;
 					};
-					E0D712D22496805D00173A38 = {
-						CreatedOnToolsVersion = 12.0;
-					};
 					E0D713A2249683BA00173A38 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -799,7 +710,6 @@
 			projectRoot = "";
 			targets = (
 				E0D712A324967CC900173A38 /* Fruta iOS */,
-				E0D712D22496805D00173A38 /* Fruta iOS Clip */,
 				E0D712AB24967CC900173A38 /* Fruta macOS */,
 				E0D713A2249683BA00173A38 /* Fruta iOS Widgets */,
 				E0D713CE2496844400173A38 /* Fruta macOS Widgets */,
@@ -821,14 +731,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0D712B524967CC900173A38 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0D712D12496805D00173A38 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E030D952249694AE00D2E087 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,55 +850,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E0D712CF2496805D00173A38 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E0567194249690F30018307A /* RecipeUnlockButton.swift in Sources */,
-				E0567176249690840018307A /* SmoothieView.swift in Sources */,
-				E05671C4249691F40018307A /* IngredientGraphic.swift in Sources */,
-				E05671B8249691720018307A /* Ingredient+SwiftUI.swift in Sources */,
-				E091DD4A24968676002DB402 /* RewardsCard.swift in Sources */,
-				61FB2FE1249948EB00E39B64 /* RedeemSmoothieButton.swift in Sources */,
-				E05671E2249692600018307A /* CountButton.swift in Sources */,
-				E056715E249690200018307A /* Smoothie.swift in Sources */,
-				E056719A249691060018307A /* RecipeView.swift in Sources */,
-				E091DD3824968624002DB402 /* Order.swift in Sources */,
-				E091DD56249686BE002DB402 /* AppSidebarNavigation.swift in Sources */,
-				E05671A02496911C0018307A /* MeasurementView.swift in Sources */,
-				E05671EE249692970018307A /* AnimatableFontModifier.swift in Sources */,
-				E05671E8249692800018307A /* StepperView.swift in Sources */,
-				E0567164249690430018307A /* Smoothie+SwiftUI.swift in Sources */,
-				E0567188249690C70018307A /* SmoothieRow.swift in Sources */,
-				E030D9582496956000D2E087 /* VisualEffectBlur.swift in Sources */,
-				E05671A6249691320018307A /* MeasuredIngredient.swift in Sources */,
-				E056718E249690DF0018307A /* RecipeList.swift in Sources */,
-				E05671AC2496914A0018307A /* Ingredient.swift in Sources */,
-				E030D951249694A600D2E087 /* FrutaApp.swift in Sources */,
-				E05671702496906B0018307A /* FavoriteSmoothies.swift in Sources */,
-				E091DD322496860B002DB402 /* Account.swift in Sources */,
-				E030D943249692FC00D2E087 /* Animations.swift in Sources */,
-				E091DD3E24968642002DB402 /* OrderPlacedView.swift in Sources */,
-				E030D955249694E400D2E087 /* ContentView.swift in Sources */,
-				E091DD502496868B002DB402 /* PaymentButton.swift in Sources */,
-				E05671BE249691DD0018307A /* IngredientCard.swift in Sources */,
-				E05671D0249692280018307A /* CardActionButton.swift in Sources */,
-				E091DD26249685E1002DB402 /* FrutaModel.swift in Sources */,
-				E091DD2C249685FC002DB402 /* Store.swift in Sources */,
-				E056716A249690580018307A /* SmoothieMenu.swift in Sources */,
-				E05671CA2496920C0018307A /* FlipView.swift in Sources */,
-				E0567182249690B30018307A /* SmoothieList.swift in Sources */,
-				E05671B22496915D0018307A /* Ingredient+NutritionFacts.swift in Sources */,
-				E05671D62496923A0018307A /* BubbleBackground.swift in Sources */,
-				E05671DC2496924E0018307A /* BubbleView.swift in Sources */,
-				E030D939249692DA00D2E087 /* SquishableButtonStyle.swift in Sources */,
-				E030D93D249692E700D2E087 /* CircleToggleStyle.swift in Sources */,
-				E091DD4424968662002DB402 /* RewardsView.swift in Sources */,
-				E056717C2496909B0018307A /* SmoothieHeaderView.swift in Sources */,
-				E030D95A2496956C00D2E087 /* AppTabNavigation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E0D7139F249683BA00173A38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1101,11 +954,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E0D712E12496805E00173A38 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E0D712D22496805D00173A38 /* Fruta iOS Clip */;
-			targetProxy = E0D712E02496805E00173A38 /* PBXContainerItemProxy */;
-		};
 		E0D713B0249683BA00173A38 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E0D713A2249683BA00173A38 /* Fruta iOS Widgets */;
@@ -1152,6 +1000,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1176,6 +1025,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1214,6 +1064,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1231,6 +1082,7 @@
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -1244,6 +1096,7 @@
 				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -1258,6 +1111,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1271,6 +1125,7 @@
 				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 72SA8V3WYL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -1286,6 +1141,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -1340,63 +1196,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		E0D712E42496805E00173A38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C640196161A8E05832EA149C /* SampleCode.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "iOS Clip/iOSClip.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 72SA8V3WYL;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "iOS Clip/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest.Clip;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG APPCLIP";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E0D712E52496805E00173A38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C640196161A8E05832EA149C /* SampleCode.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "iOS Clip/iOSClip.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 72SA8V3WYL;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "iOS Clip/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.bitrise.appcliptest.Clip;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = APPCLIP;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1537,15 +1336,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0D712E32496805E00173A38 /* Build configuration list for PBXNativeTarget "Fruta iOS Clip" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E0D712E42496805E00173A38 /* Debug */,
-				E0D712E52496805E00173A38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E0D713B2249683BA00173A38 /* Build configuration list for PBXNativeTarget "Fruta iOS Widgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1568,10 +1358,6 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		61F36D9B2496F54300E7AA4D /* NutritionFacts */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = NutritionFacts;
-		};
-		E030D9862496988800D2E087 /* NutritionFacts */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NutritionFacts;
 		};
