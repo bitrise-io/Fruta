@@ -18,7 +18,7 @@ struct StepperView: View {
             }
         }
     }
-    var label: String
+    var label: LocalizedStringKey
     var configuration: Configuration
     
     @State private var tilt = 0.0
@@ -27,24 +27,23 @@ struct StepperView: View {
         HStack {
             CountButton(mode: .decrement, action: decrement)
                 .disabled(value <= configuration.minValue)
-                .accessibility(label: Text("Decrease Count"))
 
             Text(label)
                 .frame(width: 150)
                 .padding(.vertical)
-                .accessibility(sortPriority: 2)
 
             CountButton(mode: .increment, action: increment)
                 .disabled(configuration.maxValue <= value)
-                .accessibility(label: Text("Increase Count"))
-                .accessibility(sortPriority: 1)
         }
-        .accessibilityElement(children: .contain)
+        .accessibilityRepresentation {
+            Stepper("Smoothie Count", value: $value,
+                                in: configuration.minValue...configuration.maxValue,
+                                step: configuration.increment)
+        }
         .font(Font.title2.bold())
-        .foregroundColor(.primary)
-        .background(VisualEffectBlur())
+        .foregroundStyle(.primary)
+        .background(.thinMaterial, in: Capsule())
         .contentShape(Capsule())
-        .clipShape(Capsule())
         .rotation3DEffect(.degrees(3 * tilt), axis: (x: 0, y: 1, z: 0))
     }
     

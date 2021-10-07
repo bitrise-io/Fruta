@@ -2,14 +2,20 @@
 See LICENSE folder for this sample’s licensing information.
 
 Abstract:
-The app's navigation with a configuration that offers four tabs for horizontally compressed environments
+Tab based app structure.
 */
 
 import SwiftUI
 
-// MARK: - AppTabNavigation
-
 struct AppTabNavigation: View {
+
+    enum Tab {
+        case menu
+        case favorites
+        case rewards
+        case recipes
+    }
+
     @State private var selection: Tab = .menu
 
     var body: some View {
@@ -18,8 +24,12 @@ struct AppTabNavigation: View {
                 SmoothieMenu()
             }
             .tabItem {
-                Label("Menu", systemImage: "list.bullet")
-                    .accessibility(label: Text("Menu"))
+                let menuText = Text("Menu", comment: "Smoothie menu tab title")
+                Label {
+                    menuText
+                } icon: {
+                    Image(systemName: "list.bullet")
+                }.accessibility(label: menuText)
             }
             .tag(Tab.menu)
             
@@ -27,8 +37,12 @@ struct AppTabNavigation: View {
                 FavoriteSmoothies()
             }
             .tabItem {
-                Label("Favorites", systemImage: "heart.fill")
-                    .accessibility(label: Text("Favorites"))
+                Label {
+                    Text("Favorites",
+                         comment: "Favorite smoothies tab title")
+                } icon: {
+                    Image(systemName: "heart.fill")
+                }
             }
             .tag(Tab.favorites)
             
@@ -36,8 +50,12 @@ struct AppTabNavigation: View {
                 RewardsView()
             }
             .tabItem {
-                Label("Rewards", systemImage: "seal.fill")
-                    .accessibility(label: Text("Rewards"))
+                Label {
+                    Text("Rewards",
+                         comment: "Smoothie rewards tab title")
+                } icon: {
+                    Image(systemName: "seal.fill")
+                }
             }
             .tag(Tab.rewards)
             
@@ -45,26 +63,17 @@ struct AppTabNavigation: View {
                 RecipeList()
             }
             .tabItem {
-                Label("Recipes", systemImage: "book.closed.fill")
-                    .accessibility(label: Text("Recipes"))
+                Label {
+                    Text("Recipes",
+                         comment: "Smoothie recipes tab title")
+                } icon: {
+                    Image(systemName: "book.closed.fill")
+                }
             }
             .tag(Tab.recipes)
         }
     }
 }
-
-// MARK: - Tab
-
-extension AppTabNavigation {
-    enum Tab {
-        case menu
-        case favorites
-        case rewards
-        case recipes
-    }
-}
-
-// MARK: - Previews
 
 struct AppTabNavigation_Previews: PreviewProvider {
     static var previews: some View {

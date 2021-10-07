@@ -11,7 +11,7 @@ struct Account {
     var unstampedPoints = 0
     
     var pointsEarned: Int {
-        orderHistory.map({ $0.points }).reduce(0, +)
+        orderHistory.reduce(0) { $0 + $1.points }
     }
     
     var unspentPoints: Int {

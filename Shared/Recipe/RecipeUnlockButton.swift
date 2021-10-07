@@ -14,117 +14,74 @@ struct RecipeUnlockButton: View {
     
     @Environment(\.colorScheme) private var colorScheme
     
-    var minWidth: CGFloat {
-        #if os(iOS)
-        return 80
-        #else
-        return 60
-        #endif
-    }
-    
-    @ViewBuilder var purchaseButton: some View {
-        if case let .available(price, locale) = product.availability {
-            let displayPrice: String = {
-                let formatter = NumberFormatter()
-                formatter.locale = locale
-                formatter.numberStyle = .currency
-                return formatter.string(for: price)!
-            }()
-            Button(action: purchaseAction) {
-                Text(displayPrice)
-                    .font(.subheadline)
-                    .bold()
-                    .foregroundColor(colorScheme == .light ? Color.white : .black)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                    .frame(minWidth: minWidth)
-                    .background(colorScheme == .light ? Color.black : .white)
-                    .clipShape(Capsule())
-                    .contentShape(Rectangle())
-            }
-            .buttonStyle(SquishableButtonStyle())
-            .accessibility(label: Text("Buy recipe for \(displayPrice)"))
+    var body: some View {
+        ZStack(alignment: .bottom) {
+            Image("smoothie/recipes-background").resizable()
+                .aspectRatio(contentMode: .fill)
+                #if os(iOS)
+                .frame(height: 225)
+                #else
+                .frame(height: 150)
+                #endif
+                .accessibility(hidden: true)
+            
+            bottomBar
         }
+        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .strokeBorder(.quaternary, lineWidth: 0.5)
+        }
+        .accessibilityElement(children: .contain)
     }
     
-    var bar: some View {
+    var bottomBar: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text(product.title)
                     .font(.headline)
                     .bold()
                 Text(product.description)
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
                     .font(.subheadline)
             }
             
             Spacer()
             
-            purchaseButton
+            if case let .available(displayPrice) = product.availability {
+                Button(action: purchaseAction) {
+                    Text(displayPrice)
+                }
+                .buttonStyle(.purchase)
+                .accessibility(label: Text("Buy recipe for \(displayPrice)",
+                                           comment: "Accessibility label for button to buy recipe for a certain price."))
+            }
         }
         .padding()
         .frame(maxWidth: .infinity)
+        .background(.regularMaterial)
         .accessibilityElement(children: .combine)
-    }
-    
-    var shape: RoundedRectangle {
-        #if os(iOS)
-        return RoundedRectangle(cornerRadius: 16, style: .continuous)
-        #else
-        return RoundedRectangle(cornerRadius: 10, style: .continuous)
-        #endif
-    }
-    
-    @ViewBuilder var body: some View {
-        #if os(iOS)
-        ZStack(alignment: .bottom) {
-            Image("smoothie/recipes-background").resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 225)
-                .accessibility(hidden: true)
-            bar.background(VisualEffectBlur())
-        }
-        .clipShape(shape)
-        .shadow(color: Color.black.opacity(0.25), radius: 10, x: 0, y: 5)
-        .padding()
-        .accessibilityElement(children: .contain)
-        #else
-        VStack(spacing: 0) {
-            Image("smoothie/recipes-background").resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(height: 100)
-                .clipped()
-                .overlay(Divider().padding(.horizontal, 1), alignment: .bottom)
-                .accessibility(hidden: true)
-            bar.background(Rectangle().fill(BackgroundStyle()))
-        }
-        .clipShape(shape)
-        .overlay(shape.inset(by: 0.5).stroke(Color.primary.opacity(0.1), lineWidth: 1))
-        .padding(10)
-        .accessibilityElement(children: .contain)
-        #endif
     }
 }
 
-// MARK: - Product
 extension RecipeUnlockButton {
     struct Product {
-        var title: String
-        var description: String
+        var title: LocalizedStringKey
+        var description: LocalizedStringKey
         var availability: Availability
     }
     
     enum Availability {
-        case available(price: NSDecimalNumber, locale: Locale)
+        case available(displayPrice: String)
         case unavailable
     }
 }
 
 extension RecipeUnlockButton.Product {
-    init(for product: SKProduct) {
-        title = product.localizedTitle
-        description = product.localizedDescription
-        availability = .available(price: product.price, locale: product.priceLocale)
+    init(for product: StoreKit.Product) {
+        title = LocalizedStringKey(product.displayName)
+        description = LocalizedStringKey(product.description)
+        availability = .available(displayPrice: product.displayPrice)
     }
 }
 
@@ -133,12 +90,12 @@ struct RecipeUnlockButton_Previews: PreviewProvider {
     static let availableProduct = RecipeUnlockButton.Product(
         title: "Unlock All Recipes",
         description: "Make smoothies at home!",
-        availability: .available(price: 4.99, locale: .current)
+        availability: .available(displayPrice: "$4.99")
     )
     
     static let unavailableProduct = RecipeUnlockButton.Product(
         title: "Unlock All Recipes",
-        description: "Loading...",
+        description: "Loading…",
         availability: .unavailable
     )
     

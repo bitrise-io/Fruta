@@ -6,7 +6,6 @@ A card that presents an IngredientGraphic and allows it to flip over to reveal i
 */
 
 import SwiftUI
-import NutritionFacts
 
 // MARK: - Ingredient View
 

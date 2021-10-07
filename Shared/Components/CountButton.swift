@@ -15,24 +15,16 @@ struct CountButton: View {
 
     @Environment(\.isEnabled) var isEnabled
 
-    @ViewBuilder var image: some View {
-        switch mode {
-        case .increment:
-            Image(systemName: isEnabled ? "plus.circle.fill" : "plus.circle")
-        case .decrement:
-            Image(systemName: isEnabled ? "minus.circle.fill" : "minus.circle")
-        }
-    }
-
     public var body: some View {
         Button(action: action) {
-            image
+            Image(systemName: mode.imageName)
+                .symbolVariant(isEnabled ? .circle.fill : .circle)
                 .imageScale(.large)
                 .padding()
                 .contentShape(Rectangle())
                 .opacity(0.5)
         }
-        .buttonStyle(PlainButtonStyle())
+        .buttonStyle(.plain)
     }
 }
 
@@ -42,6 +34,15 @@ extension CountButton {
     enum Mode {
         case increment
         case decrement
+
+        var imageName: String {
+            switch self {
+            case .increment:
+                return "plus"
+            case .decrement:
+                return "minus"
+            }
+        }
     }
 }
 

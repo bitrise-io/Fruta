@@ -6,7 +6,6 @@ The view that summarizes the smoothie and adjusts its layout based on the enviro
 */
 
 import SwiftUI
-import NutritionFacts
 
 struct SmoothieHeaderView: View {
     var smoothie: Smoothie
@@ -22,15 +21,7 @@ struct SmoothieHeaderView: View {
         return false
         #endif
     }
-    
-    var backgroundColor: Color {
-        #if os(macOS)
-        return Color(.textBackgroundColor)
-        #else
-        return Color(.secondarySystemBackground)
-        #endif
-    }
-    
+
     var body: some View {
         Group {
             if horizontallyConstrained {
@@ -51,13 +42,13 @@ struct SmoothieHeaderView: View {
             
             VStack(alignment: .leading) {
                 Text(smoothie.description)
-                Text("\(smoothie.kilocalories) Calories")
+                Text(smoothie.energy.formatted(.measurement(width: .wide, usage: .food)))
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(backgroundColor.edgesIgnoringSafeArea(.all))
+            .background()
         }
     }
     
@@ -72,13 +63,13 @@ struct SmoothieHeaderView: View {
                 Text(smoothie.description)
                     .font(.title2)
                 Spacer()
-                Text("\(smoothie.kilocalories) Calories")
-                    .foregroundColor(.secondary)
+                Text(smoothie.energy.formatted(.measurement(width: .wide, usage: .asProvided)))
+                    .foregroundStyle(.secondary)
                     .font(.headline)
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-            .background(backgroundColor)
+            .background()
             
             smoothie.image
                 .resizable()
@@ -89,11 +80,9 @@ struct SmoothieHeaderView: View {
         }
         .frame(height: 250)
         .clipShape(wideClipShape)
-        .overlay(
-            wideClipShape
-                .inset(by: 0.5)
-                .stroke(Color.primary.opacity(0.1), lineWidth: 1)
-        )
+        .overlay {
+            wideClipShape.strokeBorder(.quaternary, lineWidth: 0.5)
+        }
         .padding()
     }
 }
