@@ -1451,7 +1451,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				INFOPLIST_FILE = "iOS/Info-Extended.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fruta;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1488,7 +1488,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				INFOPLIST_FILE = "iOS/Info-Extended.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fruta;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1525,7 +1525,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS/Info-Extended.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1555,7 +1555,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS/Info-Extended.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1582,7 +1582,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				INFOPLIST_FILE = "iOS/Info-Widget.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fruta;
 				INFOPLIST_KEY_CFBundleExecutable = "Fruta iOS Widgets";
@@ -1614,7 +1614,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				INFOPLIST_FILE = "iOS/Info-Widget.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fruta;
 				INFOPLIST_KEY_CFBundleExecutable = "Fruta iOS Widgets";
@@ -1649,7 +1649,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS/Info-Widget.plist";
@@ -1683,7 +1683,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "macOS/Info-Widget.plist";
@@ -1718,7 +1718,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "iOS/Info-Clip.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fruta;
@@ -1758,7 +1758,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = DT2C2FZ7U2;
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "iOS/Info-Clip.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fruta;

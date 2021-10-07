@@ -4,5 +4,6 @@
 // SampleCode.xcconfig
 //
 
-BASE_BUNDLE_ID=io.bitrise.fruta
+TEAM_ID=72SA8V3WYL
+BASE_BUNDLE_ID=io.bitrise.samples.fruta
 APP_GROUP_ID=group.${BASE_BUNDLE_ID}
