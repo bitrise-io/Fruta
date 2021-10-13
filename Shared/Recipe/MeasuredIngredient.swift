@@ -6,7 +6,6 @@ An ingredient with a measurement that informs its nutrition facts
 */
 
 import SwiftUI
-import NutritionFacts
 
 struct MeasuredIngredient: Identifiable, Codable {
     var ingredient: Ingredient
@@ -36,5 +35,17 @@ extension MeasuredIngredient {
         }
         let mass = measurement.convertedToMass(usingDensity: nutritionFact.density)
         return nutritionFact.converted(toMass: mass)
+    }
+}
+
+extension Ingredient {
+    func measured(with unit: UnitVolume) -> MeasuredIngredient {
+        MeasuredIngredient(self, measurement: Measurement(value: 1, unit: unit))
+    }
+}
+
+extension MeasuredIngredient {
+    func scaled(by scale: Double) -> MeasuredIngredient {
+        return MeasuredIngredient(ingredient, measurement: measurement * scale)
     }
 }

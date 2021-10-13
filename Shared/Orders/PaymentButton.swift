@@ -11,7 +11,7 @@ import PassKit
 struct PaymentButton: View {
     var action: () -> Void
     
-    var height: CGFloat {
+    var height: Double {
         #if os(macOS)
         return 30
         #else
@@ -24,7 +24,7 @@ struct PaymentButton: View {
             .frame(minWidth: 100, maxWidth: 400)
             .frame(height: height)
             .frame(maxWidth: .infinity)
-            .accessibility(label: Text("Buy with Apple Pay"))
+            .accessibility(label: Text("Buy with Apple Pay", comment: "Accessibility label for Buy with Apple Pay button"))
     }
 }
 
@@ -37,10 +37,6 @@ extension PaymentButton {
     
     struct Representable: ViewRepresentable {
         var action: () -> Void
-        
-        init(action: @escaping () -> Void) {
-            self.action = action
-        }
         
         func makeCoordinator() -> Coordinator {
             Coordinator(action: action)

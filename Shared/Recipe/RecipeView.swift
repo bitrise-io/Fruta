@@ -6,29 +6,27 @@ A view that displays the recipe for a smoothie.
 */
 
 import SwiftUI
-import NutritionFacts
 
 struct RecipeView: View {
     var smoothie: Smoothie
+    @EnvironmentObject private var model: Model
     
     @State private var smoothieCount = 1
     
     var backgroundColor: Color {
         #if os(iOS)
-        return Color(.secondarySystemBackground)
+        return Color(uiColor: .secondarySystemBackground)
         #else
-        return Color(.textBackgroundColor)
+        return Color(nsColor: .textBackgroundColor)
         #endif
     }
     
     let shape = RoundedRectangle(cornerRadius: 24, style: .continuous)
-    
-    var pluralizer: String { smoothieCount == 1 ? "" : "s" }
 
     var recipeToolbar: some View {
         StepperView(
             value: $smoothieCount,
-            label: "\(smoothieCount) Smoothie\(pluralizer)" ,
+            label: "\(smoothieCount) Smoothies",
             configuration: StepperView.Configuration(increment: 1, minValue: 1, maxValue: 9)
         )
         .frame(maxWidth: .infinity)
@@ -43,16 +41,21 @@ struct RecipeView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(maxHeight: 300)
                     .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
-                    .overlay(recipeToolbar, alignment: .bottom)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 24, style: .continuous)
+                            .strokeBorder(.quaternary, lineWidth: 0.5)
+                    }
+                    .overlay(alignment: .bottom) { recipeToolbar }
                     
                 VStack(alignment: .leading) {
-                    Text("Ingredients")
+                    Text("Ingredients.recipe", tableName: "Ingredients",
+                         comment: "Ingredients in a recipe. For languages that have different words for \"Ingredient\" based on semantic context.")
                         .font(Font.title).bold()
-                        .foregroundColor(.secondary)
+                        .foregroundStyle(.secondary)
                     
                     VStack {
                         ForEach(0 ..< smoothie.measuredIngredients.count) { index in
-                            RecipeIngredientRow(measuredIngredient: smoothie.measuredIngredients[index], smoothieCount: smoothieCount)
+                            RecipeIngredientRow(measuredIngredient: smoothie.measuredIngredients[index].scaled(by: Double(smoothieCount)))
                                 .padding(.horizontal)
                             if index < smoothie.measuredIngredients.count - 1 {
                                 Divider()
@@ -60,66 +63,62 @@ struct RecipeView: View {
                         }
                     }
                     .padding(.vertical)
-                    .background(Rectangle().fill(BackgroundStyle()))
+                    .background()
                     .clipShape(shape)
-                    .overlay(
-                        shape
-                            .inset(by: 0.5)
-                            .stroke(Color.primary.opacity(0.1), lineWidth: 1)
-                    )
+                    .overlay {
+                        shape.strokeBorder(.quaternary, lineWidth: 0.5)
+                    }
                 }
             }
             .padding()
             .frame(minWidth: 200, idealWidth: 400, maxWidth: 400)
             .frame(maxWidth: .infinity)
         }
-        .background(backgroundColor.edgesIgnoringSafeArea(.all))
+        .background { backgroundColor.ignoresSafeArea() }
         .navigationTitle(smoothie.title)
+        .toolbar {
+            SmoothieFavoriteButton().environmentObject(model)
+        }
     }
 }
 
 struct RecipeIngredientRow: View {
     var measuredIngredient: MeasuredIngredient
-    var smoothieCount: Int
-    
+
     @State private var checked = false
-    
-    var ingredient: Ingredient {
-        measuredIngredient.ingredient
-    }
-    
-    var measurement: Measurement<UnitVolume> {
-        measuredIngredient.measurement * Double(smoothieCount)
-    }
     
     var body: some View {
         Button(action: { checked.toggle() }) {
             HStack {
-                ingredient.image
+                measuredIngredient.ingredient.image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .scaleEffect(ingredient.thumbnailCrop.scale * 1.25)
+                    .scaleEffect(measuredIngredient.ingredient.thumbnailCrop.scale * 1.25)
                     .frame(width: 60, height: 60)
                     .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(ingredient.name).font(.headline)
-                    MeasurementView(measurement: measurement)
+                    Text(measuredIngredient.ingredient.name).font(.headline)
+                    MeasurementView(measurement: measuredIngredient.measurement)
                 }
 
                 Spacer()
 
-                Toggle("Complete", isOn: $checked)
+                Toggle(isOn: $checked) {
+                    Text("Complete",
+                         comment: "Label for toggle showing whether you have completed adding an ingredient that's part of a smoothie recipe")
+                }
             }
             .contentShape(Rectangle())
         }
-        .buttonStyle(PlainButtonStyle())
-        .toggleStyle(CircleToggleStyle())
+        .buttonStyle(.plain)
+        .toggleStyle(.circle)
     }
 }
 
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
         RecipeView(smoothie: .thatsBerryBananas)
+            .environmentObject(Model())
     }
 }

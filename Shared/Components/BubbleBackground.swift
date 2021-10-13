@@ -29,15 +29,12 @@ struct BubbleBackground: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
             
-            LinearGradient(
-                gradient: Gradient(colors: [Color.primary.opacity(0.25), Color.primary.opacity(0)]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .blendMode(.overlay)
+            LinearGradient(colors: [.primary.opacity(0.25), .primary.opacity(0)], startPoint: .top, endPoint: .bottom)
+                .blendMode(.overlay)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .edgesIgnoringSafeArea(.all)
+        .ignoresSafeArea()
+        .drawingGroup()
     }
 }
 

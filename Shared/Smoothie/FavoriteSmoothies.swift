@@ -8,28 +8,32 @@ The favorites tab or content list that includes smoothies marked as favorites.
 import SwiftUI
 
 struct FavoriteSmoothies: View {
-    @EnvironmentObject private var model: FrutaModel
+    @EnvironmentObject private var model: Model
 
-    var favoriteSmooties: [Smoothie] {
+    var favoriteSmoothies: [Smoothie] {
         model.favoriteSmoothieIDs.map { Smoothie(for: $0)! }
     }
     
     var body: some View {
-        SmoothieList(smoothies: favoriteSmooties)
-            .overlay(Group {
+        SmoothieList(smoothies: favoriteSmoothies)
+            .overlay {
                 if model.favoriteSmoothieIDs.isEmpty {
-                    Text("Add some smoothies to your favorites!")
-                        .foregroundColor(.secondary)
+                    Text("Add some smoothies to your favorites!",
+                         comment: "Placeholder text shown in list of smoothies when no favorite smoothies have been added yet")
+                        .foregroundStyle(.secondary)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background()
+                        .ignoresSafeArea()
                 }
-            })
-            .navigationTitle("Favorites")
+            }
+            .navigationTitle(Text("Favorites", comment: "Title of the 'favorites' app section showing the list of favorite smoothies"))
+            .environmentObject(model)
     }
 }
 
 struct FavoriteSmoothies_Previews: PreviewProvider {
     static var previews: some View {
         FavoriteSmoothies()
-            .environmentObject(FrutaModel())
+            .environmentObject(Model())
     }
 }

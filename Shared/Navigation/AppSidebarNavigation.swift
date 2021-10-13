@@ -15,115 +15,89 @@ struct AppSidebarNavigation: View {
         case recipes
     }
 
-    @EnvironmentObject private var model: FrutaModel
-    @State private var selection: Set<NavigationItem> = [.menu]
-    @State private var presentingRewards = false
-    
-    var sidebar: some View {
-        List(selection: $selection) {
-            NavigationLink(destination: SmoothieMenu()) {
-                Label("Menu", systemImage: "list.bullet")
-            }
-            .accessibility(label: Text("Menu"))
-            .tag(NavigationItem.menu)
-            
-            NavigationLink(destination: FavoriteSmoothies()) {
-                Label("Favorites", systemImage: "heart")
-            }
-            .accessibility(label: Text("Favorites"))
-            .tag(NavigationItem.favorites)
-        
-            NavigationLink(destination: RecipeList()) {
-                Label("Recipes", systemImage: "book.closed")
-            }
-            .accessibility(label: Text("Recipes"))
-            .tag(NavigationItem.recipes)
-        }
-        .overlay(Pocket(presentingRewards: $presentingRewards), alignment: .bottom)
-        .listStyle(SidebarListStyle())
-    }
+    @EnvironmentObject private var model: Model
+    @State private var presentingRewards: Bool = false
+    @State private var selection: NavigationItem? = .menu
     
     var body: some View {
         NavigationView {
-            #if os(macOS)
-            sidebar.frame(minWidth: 100, idealWidth: 150, maxWidth: 200, maxHeight: .infinity)
-            #else
-            sidebar
-            #endif
+            List {
+                NavigationLink(tag: NavigationItem.menu, selection: $selection) {
+                    SmoothieMenu()
+                } label: {
+                    Label("Menu", systemImage: "list.bullet")
+                }
+                
+                NavigationLink(tag: NavigationItem.favorites, selection: $selection) {
+                    FavoriteSmoothies()
+                } label: {
+                    Label("Favorites", systemImage: "heart")
+                }
             
-            Text("Content List")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                NavigationLink(tag: NavigationItem.recipes, selection: $selection) {
+                    RecipeList()
+                } label: {
+                    Label("Recipes", systemImage: "book.closed")
+                }
+            }
+            .navigationTitle("Fruta")
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Pocket()
+            }
             
-            #if os(macOS)
-            Text("Select a Smoothie")
+            Text("Select a category")
+                .foregroundStyle(.secondary)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .toolbar { Spacer() }
-            #else
-            Text("Select a Smoothie")
+                .background()
+                .ignoresSafeArea()
+            
+            Text("Select a smoothie")
+                .foregroundStyle(.secondary)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-            #endif
-        }
-    }
-    
-    struct Placeholder: View {
-        var title: String
-        
-        var body: some View {
-            Text(title)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .navigationTitle(title)
+                .background()
+                .ignoresSafeArea()
+                .toolbar {
+                    SmoothieFavoriteButton()
+                        .environmentObject(model)
+                        .disabled(true)
+                }
         }
     }
     
     struct Pocket: View {
-        @Binding var presentingRewards: Bool
-        
-        @EnvironmentObject private var model: FrutaModel
+        @State private var presentingRewards: Bool = false
+        @EnvironmentObject private var model: Model
         
         var body: some View {
-            VStack(alignment: .leading, spacing: 0) {
-                Divider()
-                Button(action: { presentingRewards = true }) {
-                    HStack {
-                        Image(systemName: "seal")
-                        Text("Rewards")
-                    }
-                    .padding(6)
-                    .contentShape(Rectangle())
-                }
-                .accessibility(label: Text("Rewards"))
-                .padding(.vertical, 8)
-                .padding(.horizontal, 16)
-                .buttonStyle(PlainButtonStyle())
+            Button(action: { presentingRewards = true }) {
+                Label("Rewards", systemImage: "seal")
             }
+            .controlSize(.large)
+            .buttonStyle(.capsule)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 16)
             .sheet(isPresented: $presentingRewards) {
-                #if os(iOS)
                 RewardsView()
+                    #if os(iOS)
+                    .overlay(alignment: .topTrailing) {
+                        Button(action: { presentingRewards = false }) {
+                            Text("Done", comment: "Button title to dismiss rewards sheet")
+                        }
+                        .font(.body.bold())
+                        .keyboardShortcut(.defaultAction)
+                        .buttonStyle(.capsule)
+                        .padding()
+                    }
+                    #else
+                    .frame(minWidth: 400, maxWidth: 600, minHeight: 400, maxHeight: 600)
                     .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
+                        ToolbarItem(placement: .confirmationAction) {
                             Button(action: { presentingRewards = false }) {
-                                Text("Done")
+                                Text("Done", comment: "Button title to dismiss rewards sheet")
                             }
                         }
                     }
-                    .environmentObject(model)
-                #else
-                VStack(spacing: 0) {
-                    RewardsView()
-                    Divider()
-                    HStack {
-                        Spacer()
-                        Button(action: { presentingRewards = false }) {
-                            Text("Done")
-                        }
-                        .keyboardShortcut(.defaultAction)
-                    }
-                    .padding()
-                    .background(VisualEffectBlur())
-                }
-                .frame(minWidth: 400, maxWidth: 600, minHeight: 350, maxHeight: 500)
-                .environmentObject(model)
-                #endif
+                    #endif
             }
         }
     }
@@ -132,14 +106,14 @@ struct AppSidebarNavigation: View {
 struct AppSidebarNavigation_Previews: PreviewProvider {
     static var previews: some View {
         AppSidebarNavigation()
-            .environmentObject(FrutaModel())
+            .environmentObject(Model())
     }
 }
 
-struct AppSidebarNavigation_Pocket_Previews: PreviewProvider {
+struct AppSidebarNavigationPocket_Previews: PreviewProvider {
     static var previews: some View {
-        AppSidebarNavigation.Pocket(presentingRewards: .constant(false))
-            .environmentObject(FrutaModel())
+        AppSidebarNavigation.Pocket()
+            .environmentObject(Model())
             .frame(width: 300)
     }
 }

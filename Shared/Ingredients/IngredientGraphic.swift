@@ -6,7 +6,6 @@ A graphic that displays an Ingredient as a thumbnail, a card highlighting its im
 */
 
 import SwiftUI
-import NutritionFacts
 
 struct IngredientGraphic: View {
     var ingredient: Ingredient
@@ -35,37 +34,30 @@ struct IngredientGraphic: View {
             
             if style == .cardFront {
                 cardControls(for: .front)
-                    .foregroundColor(ingredient.title.color)
+                    .foregroundStyle(ingredient.title.color)
                     .opacity(ingredient.title.opacity)
                     .blendMode(ingredient.title.blendMode)
             }
             
             if style == .cardBack {
-                #if os(iOS)
-                VisualEffectBlur(blurStyle: .systemThinMaterial, vibrancyStyle: .fill) {
+                ZStack {
                     if let nutritionFact = ingredient.nutritionFact {
                         NutritionFactView(nutritionFact: nutritionFact)
                             .padding(.bottom, 70)
                     }
                     cardControls(for: .back)
                 }
-                #else
-                VisualEffectBlur()
-                if let nutritionFact = ingredient.nutritionFact {
-                    NutritionFactView(nutritionFact: nutritionFact)
-                        .padding(.bottom, 70)
-                }
-                cardControls(for: .back)
-                #endif
+                .background(.thinMaterial)
             }
         }
         .frame(minWidth: 130, maxWidth: 400, maxHeight: 500)
+        .compositingGroup()
         .clipShape(shape)
-        .overlay(
+        .overlay {
             shape
                 .inset(by: 0.5)
-                .stroke(Color.primary.opacity(0.1), lineWidth: 1)
-        )
+                .stroke(.quaternary, lineWidth: 0.5)
+        }
         .contentShape(shape)
         .accessibilityElement(children: .contain)
     }
@@ -88,8 +80,9 @@ struct IngredientGraphic: View {
         Text(ingredient.name.uppercased())
             .padding(.horizontal, 8)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .lineLimit(1)
-            .foregroundColor(ingredient.title.color)
+            .lineLimit(2)
+            .multilineTextAlignment(.center)
+            .foregroundStyle(ingredient.title.color)
             .rotationEffect(displayingAsCard ? ingredient.title.rotation: .degrees(0))
             .opacity(ingredient.title.opacity)
             .blendMode(ingredient.title.blendMode)

@@ -1,4 +1,8 @@
 {
+  "identifier" : "99356B80",
+  "nonRenewingSubscriptions" : [
+
+  ],
   "products" : [
     {
       "displayPrice" : "4.99",
@@ -9,6 +13,11 @@
           "description" : "Make smoothies at home!",
           "displayName" : "Unlock All Recipes",
           "locale" : "en_US"
+        },
+        {
+          "description" : "Смузи в домашних условиях",
+          "displayName" : "Разблокируйте все рецепты",
+          "locale" : "ru"
         }
       ],
       "productID" : "com.example.apple-samplecode.fruta.unlock-recipes",
@@ -24,6 +33,6 @@
   ],
   "version" : {
     "major" : 1,
-    "minor" : 0
+    "minor" : 1
   }
 }

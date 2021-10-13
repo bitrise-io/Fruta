@@ -6,12 +6,14 @@ A view presented to the user once they order a smoothie, and when it's ready to 
 */
 
 import SwiftUI
+import AuthenticationServices
+import StoreKit
 
 struct OrderPlacedView: View {
-    @EnvironmentObject private var model: FrutaModel
+    @EnvironmentObject private var model: Model
     
     #if APPCLIP
-    @Binding var presentingAppStoreOverlay: Bool
+    @State private var presentingAppStoreOverlay = false
     #endif
     
     var orderReady: Bool {
@@ -19,79 +21,34 @@ struct OrderPlacedView: View {
         return order.isReady
     }
     
-    var shouldAnnotate: Bool {
+    var presentingBottomBanner: Bool {
         #if APPCLIP
         if presentingAppStoreOverlay { return true }
         #endif
         return !model.hasAccount
     }
     
-    var blurView: some View {
-        #if os(iOS)
-        return VisualEffectBlur(blurStyle: .systemUltraThinMaterial)
-        #else
-        return VisualEffectBlur()
-        #endif
-    }
-    
-    var signUpButton: some View {
-        SignInWithAppleButton(.signUp, onRequest: { _ in }, onCompletion: model.authorizeUser)
-            .frame(minWidth: 100, maxWidth: 400)
-            .padding(.horizontal, 20)
-    }
-    
+/// - Tag: ActiveCompilationConditionTag
     var body: some View {
+
         VStack(spacing: 0) {
             Spacer()
             
-            FlipView(visibleSide: orderReady ? .back : .front) {
-                Card(
-                    title: "Thank you for your order!".uppercased(),
-                    subtitle: "We will notify you when your order is ready."
-                )
-            } back: {
-                Card(
-                    title: "Your smoothie is ready!".uppercased(),
-                    subtitle: "\(model.order?.smoothie.title ?? "Your smoothie") is ready to be picked up."
-                )
-            }
-            .animation(.flipCard, value: orderReady)
-            .padding()
+            orderStatusCard
             
             Spacer()
             
-            if shouldAnnotate {
-                VStack {
-                    if !model.hasAccount {
-                        Text("Sign up to get rewards!")
-                            .font(Font.headline.bold())
-                        
-                        #if os(iOS)
-                        signUpButton
-                            .frame(height: 45)
-                        #else
-                        signUpButton
-                        #endif
-                    } else {
-                        #if APPCLIP
-                        if presentingAppStoreOverlay {
-                            Text("Get the full smoothie experience!")
-                                .font(Font.title2.bold())
-                                .padding(.top, 15)
-                                .padding(.bottom, 150)
-                        }
-                        #endif
-                    }
-                }
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(
-                    blurView
-                        .opacity(orderReady ? 1 : 0)
-                        .padding(.bottom, -100)
-                        .edgesIgnoringSafeArea(.all)
-                )
+            if presentingBottomBanner {
+                bottomBanner
             }
+            
+            #if APPCLIP
+            Text(verbatim: "App Store Overlay")
+                .hidden()
+                .appStoreOverlay(isPresented: $presentingAppStoreOverlay) {
+                    SKOverlay.AppClipConfiguration(position: .bottom)
+                }
+            #endif
         }
         .onChange(of: model.hasAccount) { _ in
             #if APPCLIP
@@ -101,8 +58,8 @@ struct OrderPlacedView: View {
             #endif
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            ZStack(alignment: .center) {
+        .background {
+            ZStack {
                 if let order = model.order {
                     order.smoothie.image
                         .resizable()
@@ -111,11 +68,13 @@ struct OrderPlacedView: View {
                     Color("order-placed-background")
                 }
                 
-                blurView
-                    .opacity(model.order!.isReady ? 0 : 1)
+                if model.order?.isReady == false {
+                    Rectangle()
+                        .fill(.ultraThinMaterial)
+                }
             }
-            .edgesIgnoringSafeArea(.all)
-        )
+            .ignoresSafeArea()
+        }
         .animation(.spring(response: 0.25, dampingFraction: 1), value: orderReady)
         .animation(.spring(response: 0.25, dampingFraction: 1), value: model.hasAccount)
         .onAppear {
@@ -130,40 +89,82 @@ struct OrderPlacedView: View {
         }
     }
     
+    var orderStatusCard: some View {
+        FlipView(visibleSide: orderReady ? .back : .front) {
+            Card(
+                title: "Thank you for your order!",
+                subtitle: "We will notify you when your order is ready."
+            )
+        } back: {
+            let smoothieName = model.order?.smoothie.title ?? String(localized: "Smoothie", comment: "Fallback name for smoothie")
+            Card(
+                title: "Your smoothie is ready!",
+                subtitle: "\(smoothieName) is ready to be picked up."
+            )
+        }
+        .animation(.flipCard, value: orderReady)
+        .padding()
+    }
+    
+    var bottomBanner: some View {
+        VStack {
+            if !model.hasAccount {
+                Text("Sign up to get rewards!")
+                    .font(Font.headline.bold())
+                
+                SignInWithAppleButton(.signUp, onRequest: { _ in }, onCompletion: model.authorizeUser)
+                    .frame(minWidth: 100, maxWidth: 400)
+                    .padding(.horizontal, 20)
+                    #if os(iOS)
+                    .frame(height: 45)
+                    #endif
+            } else {
+                #if APPCLIP
+                if presentingAppStoreOverlay {
+                    Text("Get the full smoothie experience!")
+                        .font(Font.title2.bold())
+                        .padding(.top, 15)
+                        .padding(.bottom, 150)
+                }
+                #endif
+            }
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(.bar)
+    }
+    
     struct Card: View {
-        var title: String
-        var subtitle: String
+        var title: LocalizedStringKey
+        var subtitle: LocalizedStringKey
         
         var body: some View {
-            Circle()
-                .fill(BackgroundStyle())
-                .overlay(
-                    VStack(spacing: 16) {
-                        Text(title)
-                            .font(Font.title.bold())
-                            .layoutPriority(1)
-                        Text(subtitle)
-                            .font(.system(.headline, design: .rounded))
-                            .foregroundColor(.secondary)
-                    }
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 36)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                )
-                .frame(width: 300, height: 300)
+            VStack(spacing: 16) {
+                Text(title)
+                    .font(Font.title.bold())
+                    .textCase(.uppercase)
+                    .layoutPriority(1)
+                Text(subtitle)
+                    .font(.system(.headline, design: .rounded))
+                    .foregroundStyle(.secondary)
+            }
+            .multilineTextAlignment(.center)
+            .padding(.horizontal, 36)
+            .frame(width: 300, height: 300)
+            .background(in: Circle())
         }
     }
 }
 
 struct OrderPlacedView_Previews: PreviewProvider {
-    static let orderReady: FrutaModel = {
-        let model = FrutaModel()
+    static let orderReady: Model = {
+        let model = Model()
         model.orderSmoothie(Smoothie.berryBlue)
         model.orderReadyForPickup()
         return model
     }()
-    static let orderNotReady: FrutaModel = {
-        let model = FrutaModel()
+    static let orderNotReady: Model = {
+        let model = Model()
         model.orderSmoothie(Smoothie.berryBlue)
         return model
     }()

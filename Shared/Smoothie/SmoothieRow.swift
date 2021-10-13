@@ -6,78 +6,57 @@ A row used by SmoothieList that adjusts its layout based on environment and plat
 */
 
 import SwiftUI
-import NutritionFacts
 
 struct SmoothieRow: View {
     var smoothie: Smoothie
     
-    @EnvironmentObject private var model: FrutaModel
-
-    var size: CGFloat {
-        #if os(iOS)
-        return 96
-        #else
-        return 60
-        #endif
-    }
-
-    var cornerRadius: CGFloat {
-        #if os(iOS)
-        return 16
-        #else
-        return 8
-        #endif
-    }
-    
-    var verticalRowPadding: CGFloat {
-        #if os(macOS)
-        return 10
-        #else
-        return 0
-        #endif
-    }
-    
-    var verticalTextPadding: CGFloat {
-        #if os(iOS)
-        return 8
-        #else
-        return 0
-        #endif
-    }
-    
-    var ingredients: String {
-        ListFormatter.localizedString(byJoining: smoothie.menuIngredients.map { $0.ingredient.name })
-    }
+    @EnvironmentObject private var model: Model
 
     var body: some View {
         HStack(alignment: .top) {
+            let imageClipShape = RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
             smoothie.image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(width: size, height: size)
-                .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+                .frame(width: 60, height: 60)
+                .clipShape(imageClipShape)
+                .overlay(imageClipShape.strokeBorder(.quaternary, lineWidth: 0.5))
                 .accessibility(hidden: true)
 
             VStack(alignment: .leading) {
                 Text(smoothie.title)
                     .font(.headline)
-                    .lineLimit(1)
                 
-                Text(ingredients)
+                Text(listedIngredients)
                     .lineLimit(2)
-                    .accessibility(label: Text("Ingredients: \(ingredients)."))
+                    .accessibility(label: Text("Ingredients: \(listedIngredients).",
+                                               comment: "Accessibility label containing the full list of smoothie ingredients"))
 
-                Text("\(smoothie.kilocalories) Calories")
-                    .foregroundColor(.secondary)
+                Text(smoothie.energy.formatted(.measurement(width: .wide, usage: .food)))
+                    .foregroundStyle(.secondary)
                     .lineLimit(1)
             }
-            .padding(.vertical, verticalTextPadding)
             
             Spacer(minLength: 0)
         }
         .font(.subheadline)
-        .padding(.vertical, verticalRowPadding)
         .accessibilityElement(children: .combine)
+    }
+    
+    var listedIngredients: String {
+        guard !smoothie.menuIngredients.isEmpty else { return "" }
+        var list = [String]()
+        list.append(smoothie.menuIngredients.first!.ingredient.name.localizedCapitalized)
+        list += smoothie.menuIngredients.dropFirst().map { $0.ingredient.name.localizedLowercase }
+        return ListFormatter.localizedString(byJoining: list)
+    }
+    
+    var cornerRadius: Double {
+        #if os(iOS)
+        return 10
+        #else
+        return 4
+        #endif
     }
 }
 
@@ -92,6 +71,6 @@ struct SmoothieRow_Previews: PreviewProvider {
         .frame(width: 250, alignment: .leading)
         .padding(.horizontal)
         .previewLayout(.sizeThatFits)
-        .environmentObject(FrutaModel())
+        .environmentObject(Model())
     }
 }

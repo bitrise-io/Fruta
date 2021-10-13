@@ -12,7 +12,7 @@ struct ContentView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     #endif
     
-    @ViewBuilder var body: some View {
+    var body: some View {
         #if os(iOS)
         if horizontalSizeClass == .compact {
             AppTabNavigation()
@@ -21,7 +21,6 @@ struct ContentView: View {
         }
         #else
         AppSidebarNavigation()
-            .frame(minWidth: 900, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
         #endif
     }
 }

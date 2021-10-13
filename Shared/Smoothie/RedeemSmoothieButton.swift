@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RedeemSmoothieButton: View {
     var action: () -> Void
-    var height: CGFloat {
+    var height: Double {
         #if os(macOS)
         return 30
         #else
@@ -19,16 +19,16 @@ struct RedeemSmoothieButton: View {
     
     var body: some View {
         Button(action: action) {
-            Text("Redeem Free Smoothie!")
+            Text("Redeem Free Smoothie!", comment: "Button to redeem a free smoothie")
                 .font(Font.headline.bold())
                 .frame(height: height)
                 .frame(minWidth: 100, maxWidth: 400)
-                .foregroundColor(.white)
-                .background(Color.accentColor)
+                .foregroundStyle(.white)
+                .background { Color.accentColor }
                 .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
                 .contentShape(Rectangle())
         }
-        .buttonStyle(SquishableButtonStyle())
+        .buttonStyle(.squishable)
     }
 }
 

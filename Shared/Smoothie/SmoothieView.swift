@@ -6,7 +6,6 @@ The smoothie detail view that offers the smoothie for sale and lists its ingredi
 */
 
 import SwiftUI
-import NutritionFacts
 
 #if APPCLIP
 import StoreKit
@@ -17,7 +16,7 @@ struct SmoothieView: View {
     
     @State private var presentingOrderPlacedSheet = false
     @State private var presentingSecurityAlert = false
-    @EnvironmentObject private var model: FrutaModel
+    @EnvironmentObject private var model: Model
     @Environment(\.colorScheme) private var colorScheme
     
     @State private var selectedIngredientID: Ingredient.ID?
@@ -28,107 +27,71 @@ struct SmoothieView: View {
     @State private var presentingAppStoreOverlay = false
     #endif
     
-    var isFavorite: Bool {
-        model.favoriteSmoothieIDs.contains(smoothie.id)
-    }
-    
-    var bottomBar: some View {
-        VStack(spacing: 0) {
-            Divider()
-            Group {
-                if let account = model.account, account.canRedeemFreeSmoothie {
-                    RedeemSmoothieButton(action: redeemSmoothie)
-                } else {
-                    PaymentButton(action: orderSmoothie)
-                }
-            }
-            .padding(.horizontal, 40)
-            .padding(.vertical, 16)
-        }
-        .background(VisualEffectBlur().edgesIgnoringSafeArea(.all))
-    }
-    
     var body: some View {
-        Group {
-            #if APPCLIP
-            container
-                .appStoreOverlay(isPresented: $presentingAppStoreOverlay) {
-                    SKOverlay.AppClipConfiguration(position: .bottom)
-                }
-            #elseif os(iOS)
-            container
-            #else
-            container
-                .frame(minWidth: 500, idealWidth: 700, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+        container
+            #if os(macOS)
+            .frame(minWidth: 500, idealWidth: 700, maxWidth: .infinity, minHeight: 400, maxHeight: .infinity)
             #endif
-        }
-        .background(Rectangle().fill(BackgroundStyle()).edgesIgnoringSafeArea(.all))
-        .navigationTitle(smoothie.title)
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button(action: { model.toggleFavorite(smoothie: smoothie) }) {
-                    Label("Favorite", systemImage: isFavorite ? "heart.fill" : "heart")
-                        .labelStyle(IconOnlyLabelStyle())
-                }
-                .accessibility(label: Text("\(isFavorite ? "Remove from" : "Add to") Favorites"))
-            }
-        }
-        .sheet(isPresented: $presentingOrderPlacedSheet) {
-            VStack(spacing: 0) {
-                #if APPCLIP
-                OrderPlacedView(presentingAppStoreOverlay: $presentingAppStoreOverlay)
-                #else
-                OrderPlacedView()
-                #endif
-                
-                #if os(macOS)
-                Divider()
-                HStack {
-                    Spacer()
-                    Button(action: { presentingOrderPlacedSheet = false }) {
-                        Text("Done")
-                    }
-                    .keyboardShortcut(.defaultAction)
-                }
-                .padding()
-                .background(VisualEffectBlur())
-                #endif
-            }
+            .background()
+            .navigationTitle(smoothie.title)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button(action: { presentingOrderPlacedSheet = false }) {
-                        Text("Done")
-                    }
-                }
+                SmoothieFavoriteButton()
+                    .environmentObject(model)
             }
-            .environmentObject(model)
-        }
-        .alert(isPresented: $presentingSecurityAlert) {
-            Alert(
-                title: Text("Payments Disabled"),
-                message: Text("The Fruta QR code was scanned too far from the shop, payments are disabled for your protection."),
-                dismissButton: .default(Text("OK"))
-            )
-        }
+            .sheet(isPresented: $presentingOrderPlacedSheet) {
+                OrderPlacedView()
+                    #if os(macOS)
+                    .clipped()
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button(action: { presentingOrderPlacedSheet = false }) {
+                                Text("Done", comment: "Button to dismiss the confirmation sheet after placing an order")
+                            }
+                        }
+                    }
+                    #else
+                    .overlay(alignment: .topTrailing) {
+                        Button {
+                            presentingOrderPlacedSheet = false
+                        } label: {
+                            Text("Done", comment: "Button to dismiss the confirmation sheet after placing an order")
+                        }
+                        .font(.body.bold())
+                        .buttonStyle(.capsule)
+                        .keyboardShortcut(.defaultAction)
+                        .padding()
+                    }
+                    #endif
+            }
+            .alert(isPresented: $presentingSecurityAlert) {
+                Alert(
+                    title: Text("Payments Disabled",
+                                comment: "Title of alert dialog when payments are disabled"),
+                    message: Text("The Fruta QR code was scanned too far from the shop, payments are disabled for your protection.",
+                                  comment: "Explanatory text of alert dialog when payments are disabled"),
+                    dismissButton: .default(Text("OK",
+                                                 comment: "OK button of alert dialog when payments are disabled"))
+                )
+            }
     }
     
     var container: some View {
         ZStack {
             ScrollView {
-                #if os(iOS)
                 content
-                #else
-                content
+                    #if os(macOS)
                     .frame(maxWidth: 600)
                     .frame(maxWidth: .infinity)
-                #endif
+                    #endif
             }
-            .overlay(bottomBar, alignment: .bottom)
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                bottomBar
+            }
             .accessibility(hidden: selectedIngredientID != nil)
 
-            VisualEffectBlur()
-                .edgesIgnoringSafeArea(.all)
-                .opacity(selectedIngredientID != nil ? 1 : 0)
+            if selectedIngredientID != nil {
+                Rectangle().fill(.regularMaterial).ignoresSafeArea()
+            }
             
             ForEach(smoothie.menuIngredients) { measuredIngredient in
                 let presenting = selectedIngredientID == measuredIngredient.id
@@ -151,9 +114,11 @@ struct SmoothieView: View {
             SmoothieHeaderView(smoothie: smoothie)
                 
             VStack(alignment: .leading) {
-                Text("Ingredients")
+                Text("Ingredients.menu",
+                     tableName: "Ingredients",
+                     comment: "Ingredients in a smoothie. For languages that have different words for \"Ingredient\" based on semantic context.")
                     .font(Font.title).bold()
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
                 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 130), spacing: 16, alignment: .top)], alignment: .center, spacing: 16) {
                     ForEach(smoothie.menuIngredients) { measuredIngredient in
@@ -168,20 +133,36 @@ struct SmoothieView: View {
                                 )
                                 .contentShape(Rectangle())
                         }
-                        .buttonStyle(SquishableButtonStyle(fadeOnPress: false))
+                        .buttonStyle(.squishable(fadeOnPress: false))
                         .aspectRatio(1, contentMode: .fit)
                         .zIndex(topmostIngredientID == measuredIngredient.id ? 1 : 0)
-                        .accessibility(label: Text("\(ingredient.name) Ingredient"))
+                        .accessibility(label: Text("\(ingredient.name) Ingredient",
+                                                   comment: "Accessibility label for collapsed ingredient card in smoothie overview"))
                     }
                 }
             }
             .padding()
         }
-        .padding(.bottom, 90)
+    }
+    
+    var bottomBar: some View {
+        VStack(spacing: 0) {
+            Divider()
+            Group {
+                if let account = model.account, account.canRedeemFreeSmoothie {
+                    RedeemSmoothieButton(action: redeemSmoothie)
+                } else {
+                    PaymentButton(action: orderSmoothie)
+                }
+            }
+            .padding(.horizontal, 40)
+            .padding(.vertical, 16)
+        }
+        .background(.bar)
     }
     
     func orderSmoothie() {
-        guard model.applePayAllowed else {
+        guard model.isApplePayEnabled else {
             presentingSecurityAlert = true
             return
         }
@@ -221,6 +202,6 @@ struct SmoothieView_Previews: PreviewProvider {
                     .frame(height: 700)
             }
         }
-        .environmentObject(FrutaModel())
+        .environmentObject(Model())
     }
 }

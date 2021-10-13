@@ -16,3 +16,13 @@ struct SquishableButtonStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.95 : 1)
     }
 }
+
+extension ButtonStyle where Self == SquishableButtonStyle {
+    static var squishable: SquishableButtonStyle {
+        SquishableButtonStyle()
+    }
+    
+    static func squishable(fadeOnPress: Bool = true) -> SquishableButtonStyle {
+        SquishableButtonStyle(fadeOnPress: fadeOnPress)
+    }
+}
