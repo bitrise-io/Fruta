@@ -15,7 +15,7 @@ struct CircleToggleStyle: ToggleStyle {
                 .accessibility(label: configuration.isOn ?
                                Text("Checked", comment: "Accessibility label for circular style toggle that is checked (on)") :
                                 Text("Unchecked", comment: "Accessibility label for circular style toggle that is unchecked (off)"))
-                //.foregroundStyle(configuration.isOn ? Color.accentColor : .secondary)
+                .foregroundStyle(configuration.isOn ? Color.accentColor : .secondary)
                 .imageScale(.large)
                 .font(Font.title)
         }

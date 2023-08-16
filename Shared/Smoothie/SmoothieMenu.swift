@@ -11,7 +11,7 @@ struct SmoothieMenu: View {
     
     var body: some View {
         SmoothieList(smoothies: Smoothie.all())
-            //.navigationTitle(Text("Menu", comment: "Title of the 'menu' app section showing the menu of available smoothies"))
+            .navigationTitle(Text("Menu", comment: "Title of the 'menu' app section showing the menu of available smoothies"))
     }
     
 }
