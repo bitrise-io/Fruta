@@ -20,7 +20,7 @@ struct SmoothieRow: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 60, height: 60)
                 .clipShape(imageClipShape)
-                .overlay(imageClipShape.strokeBorder(.quaternary, lineWidth: 0.5))
+//                .overlay(imageClipShape.strokeBorder(.quaternary, lineWidth: 0.5))
                 .accessibility(hidden: true)
 
             VStack(alignment: .leading) {

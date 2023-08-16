@@ -28,7 +28,7 @@ public struct NutritionRow: View {
             Spacer()
             Text(nutritionValue)
                 .fontWeight(.semibold)
-                .foregroundStyle(.secondary)
+                //.foregroundStyle(.secondary)
         }
         .font(.footnote)
     }
