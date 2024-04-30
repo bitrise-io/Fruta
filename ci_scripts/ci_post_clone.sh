@@ -6,7 +6,7 @@ printenv
 
 brew config
 
-ls -la $HOMEBREW_REPOSITORY
+ls -la /Users/local/Homebrew
 
 
 exit 1
