@@ -1,3 +1,5 @@
 #!/bin/sh
  
- xcrun simctl list runtimes -v
+xcrun simctl list runtimes -v
+
+printenv
