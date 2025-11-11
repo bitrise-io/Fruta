@@ -1449,9 +1449,9 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "iOS/iOS Extended.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "${TEAM_ID}";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "iOS/Info-Extended.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fruta;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1486,9 +1486,9 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "iOS/iOS Extended.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "${TEAM_ID}";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "iOS/Info-Extended.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Fruta;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
