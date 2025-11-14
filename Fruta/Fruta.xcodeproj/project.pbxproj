@@ -402,7 +402,7 @@
 		610F54732615818D001D3AA0 /* NutritionFact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionFact.swift; sourceTree = "<group>"; };
 		610F54742615818D001D3AA0 /* UnitIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitIcons.swift; sourceTree = "<group>"; };
 		610F54752615818D001D3AA0 /* DisplayableMeasurement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayableMeasurement.swift; sourceTree = "<group>"; };
-		610F550626158DDB001D3AA0 /* Fruta iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fruta iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		610F550626158DDB001D3AA0 /* Fruta renamed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fruta renamed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		610F554926158DE2001D3AA0 /* Fruta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		610F554F26158E0A001D3AA0 /* Fruta iOS Widgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Fruta iOS Widgets.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		610F55AA261592F8001D3AA0 /* Fruta macOS Widgets.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Fruta macOS Widgets.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -560,7 +560,7 @@
 		5E612405244E8B32004DDFF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				610F550626158DDB001D3AA0 /* Fruta iOS.app */,
+				610F550626158DDB001D3AA0 /* Fruta renamed.app */,
 				610F554926158DE2001D3AA0 /* Fruta.app */,
 				610F554F26158E0A001D3AA0 /* Fruta iOS Widgets.appex */,
 				610F55AA261592F8001D3AA0 /* Fruta macOS Widgets.appex */,
@@ -748,9 +748,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		610F54C626158DDB001D3AA0 /* Fruta iOS */ = {
+		610F54C626158DDB001D3AA0 /* Fruta renamed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 610F550326158DDB001D3AA0 /* Build configuration list for PBXNativeTarget "Fruta iOS" */;
+			buildConfigurationList = 610F550326158DDB001D3AA0 /* Build configuration list for PBXNativeTarget "Fruta renamed" */;
 			buildPhases = (
 				610F54C726158DDB001D3AA0 /* Sources */,
 				610F54FC26158DDB001D3AA0 /* Frameworks */,
@@ -765,9 +765,9 @@
 				610F555F26158E0B001D3AA0 /* PBXTargetDependency */,
 				612F3D922615A2F600137D77 /* PBXTargetDependency */,
 			);
-			name = "Fruta iOS";
+			name = "Fruta renamed";
 			productName = "Smoothies iOS";
-			productReference = 610F550626158DDB001D3AA0 /* Fruta iOS.app */;
+			productReference = 610F550626158DDB001D3AA0 /* Fruta renamed.app */;
 			productType = "com.apple.product-type.application";
 		};
 		610F550826158DE2001D3AA0 /* Fruta macOS */ = {
@@ -876,7 +876,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				610F54C626158DDB001D3AA0 /* Fruta iOS */,
+				610F54C626158DDB001D3AA0 /* Fruta renamed */,
 				612F3D832615A2F400137D77 /* Fruta iOS Clip */,
 				610F550826158DE2001D3AA0 /* Fruta macOS */,
 				610F554E26158E0A001D3AA0 /* Fruta iOS Widgets */,
@@ -1800,7 +1800,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		610F550326158DDB001D3AA0 /* Build configuration list for PBXNativeTarget "Fruta iOS" */ = {
+		610F550326158DDB001D3AA0 /* Build configuration list for PBXNativeTarget "Fruta renamed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				610F550426158DDB001D3AA0 /* Debug */,
