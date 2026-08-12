@@ -1595,7 +1595,7 @@
 				);
 				MARKETING_VERSION = 2.0;
 				OTHER_SWIFT_FLAGS = "-disallow-use-new-driver";
-				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_ID}.ios-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_ID}.ios.widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -1627,7 +1627,7 @@
 				);
 				MARKETING_VERSION = 2.0;
 				OTHER_SWIFT_FLAGS = "-disallow-use-new-driver";
-				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_ID}.ios-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_ID}.ios.widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
@@ -1663,7 +1663,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 2.0;
 				OTHER_SWIFT_FLAGS = "-disallow-use-new-driver";
-				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_ID}.macos-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_ID}.macos.widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -1697,7 +1697,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 2.0;
 				OTHER_SWIFT_FLAGS = "-disallow-use-new-driver";
-				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_ID}.macos-widgets";
+				PRODUCT_BUNDLE_IDENTIFIER = "${BASE_BUNDLE_ID}.macos.widgets";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
