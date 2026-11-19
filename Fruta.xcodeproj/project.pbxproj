@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BFECED42A8CC3BD00F9D606 /* ci_post_clone.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4BFECED32A8CC3BD00F9D606 /* ci_post_clone.sh */; };
 		610F54C826158DDB001D3AA0 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6111A1C726157D870046AAA9 /* PaymentButton.swift */; };
 		610F54C926158DDB001D3AA0 /* CountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6111A1CD26157D870046AAA9 /* CountButton.swift */; };
 		610F54CA26158DDB001D3AA0 /* CardActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6111A1CE26157D870046AAA9 /* CardActionButton.swift */; };
@@ -391,6 +392,7 @@
 
 /* Begin PBXFileReference section */
 		33BFC6A1DCA101BFABE069E5 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		4BFECED32A8CC3BD00F9D606 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 		5E6123FD244E8B32004DDFF7 /* FrutaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrutaApp.swift; sourceTree = "<group>"; };
 		5E6123FF244E8B32004DDFF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		610F54662615818D001D3AA0 /* NutritionFactView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionFactView.swift; sourceTree = "<group>"; };
@@ -517,15 +519,32 @@
 		3CAE0E9B584C983E4E90807D /* LICENSE */ = {
 			isa = PBXGroup;
 			children = (
+				4BFECED12A8CC36D00F9D606 /* ci_scripts */,
 				33BFC6A1DCA101BFABE069E5 /* LICENSE.txt */,
 				A594677E73BEF8AA1F7A859F /* ACKNOWLEDGMENTS.txt */,
 			);
 			path = LICENSE;
 			sourceTree = "<group>";
 		};
+		4BFECED12A8CC36D00F9D606 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
+		4BFECED22A8CC38E00F9D606 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				4BFECED32A8CC3BD00F9D606 /* ci_post_clone.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 		5E6123F7244E8B32004DDFF7 = {
 			isa = PBXGroup;
 			children = (
+				4BFECED22A8CC38E00F9D606 /* ci_scripts */,
 				E036C2ED2633B2B200E15D26 /* README.md */,
 				5E6123FC244E8B32004DDFF7 /* Shared */,
 				5E612406244E8B32004DDFF7 /* iOS */,
@@ -892,6 +911,7 @@
 			files = (
 				A3DC6E3B2657241A008724A1 /* Ingredients.strings in Resources */,
 				A3C268EE262FE0030093B9DF /* Localizable.strings in Resources */,
+				4BFECED42A8CC3BD00F9D606 /* ci_post_clone.sh in Resources */,
 				A3C26908262FE1020093B9DF /* InfoPlist.strings in Resources */,
 				A31FA5B526323F9400FC46C1 /* NutritionalItems.json in Resources */,
 				610F54FE26158DDB001D3AA0 /* Assets.xcassets in Resources */,
